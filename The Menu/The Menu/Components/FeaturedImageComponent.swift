@@ -9,15 +9,10 @@ import Foundation
 import SwiftUI
 
 struct FeaturedImageComponent: UIComponent {
-    
     let uiModel: FeaturedImageUIModel
-    
-    var uniqueId: String {
-        return ComponentType.featuredImage.rawValue
-    }
+    let id = UUID()
     
     func render() -> AnyView {
-//        let imageUrl = URL(string: uiModel.imageUrl)
         return AsyncImage(url: uiModel.imageUrl) { image in
             image.resizable()
                 .aspectRatio(contentMode: .fill)

@@ -1,20 +1,24 @@
-//
-//  CarouselView.swift
-//  The Menu
-//
-//  Created by Vitor Pires on 04/12/23.
-//
-
 import SwiftUI
 
 struct CarouselView: View {
+    
+    let uiModel: CarouselUIModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct CarouselView_Previews: PreviewProvider {
-    static var previews: some View {
-        CarouselView()
+        ScrollView(.horizontal) {
+            HStack{
+                ForEach(uiModel.items) { item in
+                    Navigator.perform(action: uiModel.action, payload: item) {
+                        AsyncImage(url: item.imageUrl) { image in
+                            image
+                                .resizable()
+                                .frame(width: 200, height: 200)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                    } 
+                }.toAnyView()
+            }
+        }
     }
 }

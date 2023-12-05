@@ -1,8 +1,13 @@
-//
-//  TextRowComponent.swift
-//  The Menu
-//
-//  Created by Vitor Pires on 05/12/23.
-//
-
 import Foundation
+import SwiftUI
+
+struct TextRowComponent: UIComponent {
+    let id: UUID = UUID()
+    let uiModel: TextRowUIModel
+    
+    func render() -> AnyView {
+        Text(uiModel.text)
+            .padding()
+            .toAnyView()
+    }
+}

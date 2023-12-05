@@ -1,8 +1,11 @@
-//
-//  RatingComponent.swift
-//  The Menu
-//
-//  Created by Vitor Pires on 05/12/23.
-//
-
 import Foundation
+import SwiftUI
+
+struct RatingComponent: UIComponent {
+    let id = UUID()
+    let uiModel: RatingUIModel
+    
+    func render() -> AnyView {
+        RatingView(rating: .constant(uiModel.rating)).toAnyView()
+    }
+}

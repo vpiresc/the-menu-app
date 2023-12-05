@@ -25,5 +25,9 @@ struct Constants {
     struct Urls {
         static let baseUrl = "http://localhost:3000"
         static let menuList = "\(baseUrl)/menu-list"
+        
+        static func menuItemDetail(itemId: Int) -> String {
+            return "\(baseUrl)/menu-item-detail/\(itemId)"
+        }
     }
 }

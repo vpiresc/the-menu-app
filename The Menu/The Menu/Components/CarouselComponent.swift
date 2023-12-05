@@ -1,8 +1,11 @@
-//
-//  CarouselComponent.swift
-//  The Menu
-//
-//  Created by Vitor Pires on 04/12/23.
-//
-
 import Foundation
+import SwiftUI
+
+struct CarouselComponent: UIComponent {
+    let uiModel: CarouselUIModel
+    let id = UUID()
+    
+    func render() -> AnyView {
+        CarouselView(uiModel: uiModel).toAnyView()
+    }
+}

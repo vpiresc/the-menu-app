@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  The Menu
-//
-//  Created by Vitor Pires on 01/12/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -13,12 +6,13 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                ForEach(viewModel.components, id: \.uniqueId) { component in
+            List {
+                ForEach(viewModel.components, id: \.id) { component in
                     component.render()
                 }
                 .navigationTitle("The Menu")
-            }.task {
+            }.listStyle(.plain)
+                .task {
                 await viewModel.load()
             }
         }
