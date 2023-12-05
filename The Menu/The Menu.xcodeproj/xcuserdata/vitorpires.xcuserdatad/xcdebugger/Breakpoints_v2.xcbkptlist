@@ -3,4 +3,132 @@
    uuid = "584FD5E1-36D6-4E2B-9C3A-F948FE7CCF3D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "039FED30-8012-4F0F-AA18-F9837524C88C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The Menu/ViewModels/MenuListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "load()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - 5bdb0411c89f1ad1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
+                  moduleName = "The Menu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - 4f70fe2f13c3d3fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
+                  moduleName = "The Menu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - b7428e3e3dc47cd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
+                  moduleName = "The Menu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - 797e32cdd75923ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
+                  moduleName = "The Menu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C1B04FC-57A7-4A80-AC07-6F9A9C909CE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The Menu/ViewModels/MenuListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "load()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1C1B04FC-57A7-4A80-AC07-6F9A9C909CE8 - b7428e3e3dc47cb4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
+                  moduleName = "The Menu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "1C1B04FC-57A7-4A80-AC07-6F9A9C909CE8 - 797e32cdd759238b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
+                  moduleName = "The Menu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

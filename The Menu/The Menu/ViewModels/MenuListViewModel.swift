@@ -14,7 +14,8 @@ class MenuListViewModel: ObservableObject {
             let screenModel = try await service.load(Constants.Urls.menuList)
             components = try screenModel.buildComponents()
         } catch {
-            print(error)
+//            print(error)
+           NetworkError.invalidServerResponse
         }
     }
 }
