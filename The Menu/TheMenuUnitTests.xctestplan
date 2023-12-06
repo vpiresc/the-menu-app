@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "A40DA393-1C6A-42A2-A72F-04157E0460B4",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:The Menu.xcodeproj",
+        "identifier" : "9C2FADF82B20BDD900CBFE4F",
+        "name" : "TheMenuUnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

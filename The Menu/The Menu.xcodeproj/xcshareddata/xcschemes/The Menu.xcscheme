@@ -41,13 +41,24 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO"
+            skipped = "YES"
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9CF6FD5B2B1A45A2003B74AB"
                BuildableName = "The MenuUITests.xctest"
                BlueprintName = "The MenuUITests"
+               ReferencedContainer = "container:The Menu.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9C2FADF82B20BDD900CBFE4F"
+               BuildableName = "TheMenuUnitTests.xctest"
+               BlueprintName = "TheMenuUnitTests"
                ReferencedContainer = "container:The Menu.xcodeproj">
             </BuildableReference>
          </TestableReference>

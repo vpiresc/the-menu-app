@@ -7,77 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "039FED30-8012-4F0F-AA18-F9837524C88C"
+            uuid = "5E102CB3-F6E3-4F7B-AB4A-B8FD9EEFA3EA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "The Menu/ViewModels/MenuListViewModel.swift"
+            filePath = "The MenuTests/Mockable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "load()"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "loadJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "187C4649-9AD9-433C-B7EF-DCAE976D232D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The MenuTests/Mockable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "loadJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D98FB84D-8B30-45FC-B9B9-4BF08EB45D10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The MenuTests/Mockable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "loadJSON(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - 5bdb0411c89f1ad1"
+                  uuid = "D98FB84D-8B30-45FC-B9B9-4BF08EB45D10 - 88d11cdf8447c004"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
-                  moduleName = "The Menu"
+                  symbolName = "(1) suspend resume partial function for TheMenuUnitTests.Mockable.loadJSON(Swift.String) async throws -&gt; The_Menu.ScreenModel"
+                  moduleName = "TheMenuUnitTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20MenuTests/Mockable.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "94">
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "170">
                </Location>
                <Location
-                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - 4f70fe2f13c3d3fc"
+                  uuid = "D98FB84D-8B30-45FC-B9B9-4BF08EB45D10 - 88d11cdf8447c004"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
-                  moduleName = "The Menu"
+                  symbolName = "(1) suspend resume partial function for TheMenuUnitTests.Mockable.loadJSON(Swift.String) async throws -&gt; The_Menu.ScreenModel"
+                  moduleName = "TheMenuUnitTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20MenuTests/Mockable.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "59">
-               </Location>
-               <Location
-                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - b7428e3e3dc47cd3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
-                  moduleName = "The Menu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "119">
-               </Location>
-               <Location
-                  uuid = "039FED30-8012-4F0F-AA18-F9837524C88C - 797e32cdd75923ec"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
-                  moduleName = "The Menu"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "84">
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "394">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -85,49 +87,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1C1B04FC-57A7-4A80-AC07-6F9A9C909CE8"
+            uuid = "B3BDF4EF-F50A-4982-8440-825B618ED45D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "The Menu/ViewModels/MenuListViewModel.swift"
+            filePath = "The MenuTests/MenuListViewModelTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "load()"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "test_load_when_responseType_failure_and_invalid_json_should_be_failure()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1C1B04FC-57A7-4A80-AC07-6F9A9C909CE8 - b7428e3e3dc47cb4"
+                  uuid = "B3BDF4EF-F50A-4982-8440-825B618ED45D - 4932b865ee41efbd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
-                  moduleName = "The Menu"
+                  symbolName = "(5) suspend resume partial function for TheMenuUnitTests.MenuListViewModelTests.test_load_when_invalid_path_should_be_success() async throws -&gt; ()"
+                  moduleName = "TheMenuUnitTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20MenuTests/MenuListViewModelTests.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "484">
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "480">
                </Location>
                <Location
-                  uuid = "1C1B04FC-57A7-4A80-AC07-6F9A9C909CE8 - 797e32cdd759238b"
+                  uuid = "B3BDF4EF-F50A-4982-8440-825B618ED45D - 4932b865ee41efbd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for The_Menu.MenuListViewModel.load() async -&gt; ()"
-                  moduleName = "The Menu"
+                  symbolName = "(5) suspend resume partial function for TheMenuUnitTests.MenuListViewModelTests.test_load_when_invalid_path_should_be_success() async throws -&gt; ()"
+                  moduleName = "TheMenuUnitTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20Menu/ViewModels/MenuListViewModel.swift"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20MenuTests/MenuListViewModelTests.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "172">
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "B3BDF4EF-F50A-4982-8440-825B618ED45D - cb5c3191a7711c49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for TheMenuUnitTests.MenuListViewModelTests.test_load_when_responseType_failure_and_invalid_json_should_be_failure() async -&gt; ()"
+                  moduleName = "TheMenuUnitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vitorpires/Developer/The%20Menu%20App/The%20Menu/The%20MenuTests/MenuListViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "501">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6CB3D7D-AC7C-4560-976B-9C72267838DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The MenuTests/WebserviceMock.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "load(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
