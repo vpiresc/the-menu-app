@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "A40DA393-1C6A-42A2-A72F-04157E0460B4",
+      "id" : "24FC7912-4436-447F-A668-7A0B2F168F5D",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -9,7 +9,11 @@
     }
   ],
   "defaultOptions" : {
-
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:The Menu.xcodeproj",
+      "identifier" : "9CF6FD412B1A45A0003B74AB",
+      "name" : "The Menu"
+    }
   },
   "testTargets" : [
     {

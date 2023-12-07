@@ -6,6 +6,9 @@ struct RatingComponent: UIComponent {
     let uiModel: RatingUIModel
     
     func render() -> AnyView {
-        RatingView(rating: .constant(uiModel.rating)).toAnyView()
+        HStack {
+            Text("Ratings: ")
+            RatingView(rating: .constant(uiModel.rating))
+        }.toAnyView()
     }
 }

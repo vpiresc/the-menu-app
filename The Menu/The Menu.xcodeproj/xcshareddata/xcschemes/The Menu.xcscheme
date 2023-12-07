@@ -26,8 +26,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:The Menu.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -59,6 +64,28 @@
                BlueprintIdentifier = "9C2FADF82B20BDD900CBFE4F"
                BuildableName = "TheMenuUnitTests.xctest"
                BlueprintName = "TheMenuUnitTests"
+               ReferencedContainer = "container:The Menu.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9CE418672B20FA8E00781656"
+               BuildableName = "TheMenuUITests.xctest"
+               BlueprintName = "TheMenuUITests"
+               ReferencedContainer = "container:The Menu.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9CE418762B20FC3B00781656"
+               BuildableName = "TheMenuSnapshotTests.xctest"
+               BlueprintName = "TheMenuSnapshotTests"
                ReferencedContainer = "container:The Menu.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -36,6 +36,7 @@ struct ScreenModel: Decodable {
 extension ScreenModel {
     func buildComponents() throws -> [UIComponent] {
         var components : [UIComponent] = []
+        let navigator = Navigator()
         for component in self.components {
             switch component.type {
             case .featuredImage:
@@ -47,7 +48,7 @@ extension ScreenModel {
                 guard let uiModel: CarouselUIModel = component.data.decode() else {
                     throw ComponentError.decodingError
                 }
-                components.append(CarouselComponent(uiModel: uiModel))
+                components.append(CarouselComponent(uiModel: uiModel, navigator: navigator))
             case .textRow:
                 guard let uiModel: TextRowUIModel = component.data.decode() else {
                     throw ComponentError.decodingError
@@ -62,7 +63,7 @@ extension ScreenModel {
                 guard let uiModel: ListUIModel = component.data.decode() else {
                     throw ComponentError.decodingError
                 }
-                components.append(ListComponent(uiModel: uiModel))
+                components.append(ListComponent(uiModel: uiModel, navigator: navigator))
             case .none:
                 components.append(EmptyComponent())
             }

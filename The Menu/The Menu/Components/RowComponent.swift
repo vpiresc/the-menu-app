@@ -10,7 +10,8 @@ struct RowComponent: UIComponent {
             if let imageUrl = uiModel.imageUrl {
                 AsyncImage(url: imageUrl) { image in
                     image.resizable()
-                        .frame(width: 100, height: 100)
+                        .frame(width: 80, height: 80)
+                        .clipShape(Circle())
                 } placeholder: {
                     ProgressView()
                 }.toAnyView()

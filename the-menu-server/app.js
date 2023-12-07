@@ -4,32 +4,37 @@ const app = express()
 const menuItems = [
     {
         itemId: 1,
-        imageUrl: "https://images.unsplash.com/photo-1598515213692-5f252f75d785?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        description: "Every meal featured among The Menu movie dishes has a specific meaning behind it.",
+        imageUrl: "https://img.freepik.com/free-psd/food-social-media-banner-post-template_202595-365.jpg?w=1380&t=st=1701957548~exp=1701958148~hmac=a21c07ff0d0aae9d627e88a4dd41524cc3c4edb4c947782167ff445c52bde7b9",
+        title: "Today Offer",
+        description: "This a great menu! Bacon ipsum dolor amet fatback shank leberkas meatball spare ribs t-bone sirloin brisket bacon. Rump ball tip beef chicken landjaeger. Picanha strip steak boudin rump shank. Pastrami ground round spare ribs, pork ball tip kielbasa jowl fatback swine short ribs buffalo sirloin pork loin drumstick.",
         rating: 5
     },
     {
         itemId: 2,
-        imageUrl: "https://images.unsplash.com/photo-1609167830220-7164aa360951?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        description: "The Menu is centered around a unique dinner experience on the island called Hawthorne, where twelve guests dine at an exclusive restaurant owned by celebrity chef Julian Slowik.",
+        imageUrl: "https://img.freepik.com/free-psd/food-menu-restaurant-social-media-banner-template_120329-3313.jpg?w=1380&t=st=1701957302~exp=1701957902~hmac=64f914612ee2cf1eb361b01e3763f6a1c1a2202b94e596db35e1d3a2acc30d4e",
+        title: "Friday Promo",
+        description: "This is a good menu! Banana bread lemon lime minty fruit smash burritos cozy cinnamon oatmeal Indian spiced crunchy smoky maple tempeh glaze seitan coriander cool cucumbers delightful blueberry scones walnut pesto tart scotch bonnet pepper Thai dragon pepper onion heat ",
         rating: 4
     },
     {
         itemId: 3,
-        imageUrl: "https://images.unsplash.com/photo-1528738064262-9f834cbdfda1?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        description: "The twelve guests consist of wealthy businessmen, celebrities, food critics and others who can offer such an expensive restaurant experience, standing in stark contrast with the kitchen staff who lives and works on the island with the Chef to earn their living and provide the service the wealthy minority has paid for.",
+        imageUrl: "https://img.freepik.com/premium-psd/psd-food-restaurant-social-media-post-collection_510647-226.jpg?w=1380",
+        title: "Limited Time Offer",
+        description: "This menu is OK! Bonbon toffee bonbon candy canes chocolate cake candy. Brownie gummi bears chocolate marshmallow powder macaroon. Apple pie sweet roll candy canes candy canes sweet jelly-o gummi bears topping caramels.",
         rating: 3
     },
     {
         itemId: 4,
-        imageUrl: "https://images.unsplash.com/photo-1530524428108-f983ca74ad0f?q=80&w=3276&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-        description: "Every meal featured among The Menu movie dishes has a specific meaning behind it.",
+        imageUrl: "https://img.freepik.com/free-psd/food-social-media-promotion-instagram-banner-post-design-template_202595-475.jpg?w=1380&t=st=1701957552~exp=1701958152~hmac=f05cfe9a7fa2b15a4380be43ad96668300985d16f35ffc8664233b136d91f0b8", 
+        title: "Pizza Friday",
+        description: "This menu is not so good",
         rating: 2
     },
     {
         itemId: 5,
-        imageUrl: "https://images.unsplash.com/photo-1589378884250-431463f05637?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        description: "Every meal featured among The Menu movie dishes has a specific meaning behind it. The Menu is centered around a unique dinner experience on the island called Hawthorne, where twelve guests dine at an exclusive restaurant owned by celebrity chef Julian Slowik.",
+        imageUrl: "https://img.freepik.com/free-psd/delicious-burger-food-menu-social-media-banner-template_120329-3307.jpg?w=1380&t=st=1701957555~exp=1701958155~hmac=58d4c4cbf164717822e275fc2ec4deb58c48dc2d9957e234211d2d5c20fae6fb",
+        title: "Best Discount",
+        description: "This menu is not good",
         rating: 1
     }
 ]
@@ -73,7 +78,7 @@ app.get("/menu-list", (req, res) => {
             {
                 type: "featuredImage",
                 data: {
-                    imageUrl: "https://plus.unsplash.com/premium_photo-1667682942148-a0c98d1d70db?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageUrl: "https://img.freepik.com/premium-vector/burger-social-media-feed-post-template_123371-177.jpg?w=2000"
                 }
             }, 
             {
@@ -82,7 +87,8 @@ app.get("/menu-list", (req, res) => {
                 items: menuItems.map(item => {
                     return {
                         itemId: item.itemId,
-                        imageUrl: item.imageUrl
+                        imageUrl: item.imageUrl,
+                        itemTitle: item.title
                     }
                 }),
                 action: {
@@ -101,14 +107,14 @@ app.get("/menu-list", (req, res) => {
                         id: 1,
                         title: "Appetizer",
                         subTitle: "This is a great appetizer!",
-                        imageUrl: "https://images.unsplash.com/photo-1589378884250-431463f05637?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                        description: "Every meal featured among The Menu movie dishes has a specific meaning behind it."
+                        imageUrl: "https://img.freepik.com/free-photo/pretty-woman-beret-sniffs-fragrant-donut-portrait-girl-with-curly-hair-isolated-red-wall_197531-14359.jpg?w=2000&t=st=1701959556~exp=1701960156~hmac=09c3d07cf36b5b302c459f1d3ba0d717cb6e1ea0f92fe14cc2c0899ca4f5c412",
+                        description: "Every meal featured among this menu has a specific meaning behind it."
                 },
                 {
                     id: 2,
-                    title: "Dessert",
-                    subTitle: "This is a great dessert!",
-                    imageUrl: "https://images.unsplash.com/photo-1589378884250-431463f05637?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    title: "Nice discount",
+                    subTitle: "This is a great discount!",
+                    imageUrl: "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559"
             }
             ],
                 action: {
@@ -120,7 +126,7 @@ app.get("/menu-list", (req, res) => {
         {
             type: "featuredImage",
             data: {
-                imageUrl: "https://images.unsplash.com/photo-1589378884250-431463f05637?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                imageUrl: "https://img.freepik.com/premium-vector/bakery-hand-drawn-ig-stories-set_23-2149486151.jpg?w=2000"
             }
         }
         ]

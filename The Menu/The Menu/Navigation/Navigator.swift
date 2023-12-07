@@ -16,7 +16,7 @@ struct SheetView<V: View>: View {
 }
 
 class Navigator {
-    static func perform<V: View>(action: Action, payload: Any? = nil, content: @escaping () -> V) -> AnyView {
+    func perform<V: View>(action: Action, payload: Any? = nil, content: @escaping () -> V) -> AnyView {
         var destinationView: AnyView!
         
         switch action.destination {

@@ -58,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		9C2FADF92B20BDD900CBFE4F /* TheMenuUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMenuUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C2FAE092B20BEB000CBFE4F /* TheMenuUnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TheMenuUnitTests.xctestplan; sourceTree = "<group>"; };
+		9C42C4942B21F2A7009FB751 /* The Menu.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "The Menu.xctestplan"; sourceTree = "<group>"; };
 		9CA862992B1E007C00737E46 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		9CA8629B2B1E1F1B00737E46 /* CarouselUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUIModel.swift; sourceTree = "<group>"; };
 		9CA8629D2B1E1F4B00737E46 /* CarouselComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselComponent.swift; sourceTree = "<group>"; };
@@ -178,13 +178,21 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		9CE418852B2101A500781656 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9CF6FD392B1A45A0003B74AB = {
 			isa = PBXGroup;
 			children = (
-				9C2FAE092B20BEB000CBFE4F /* TheMenuUnitTests.xctestplan */,
+				9C42C4942B21F2A7009FB751 /* The Menu.xctestplan */,
 				9CF6FD442B1A45A0003B74AB /* The Menu */,
 				9C2FADFA2B20BDD900CBFE4F /* TheMenuUnitTests */,
 				9CF6FD432B1A45A0003B74AB /* Products */,
+				9CE418852B2101A500781656 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -325,6 +333,8 @@
 			dependencies = (
 			);
 			name = "The Menu";
+			packageProductDependencies = (
+			);
 			productName = "The Menu";
 			productReference = 9CF6FD422B1A45A0003B74AB /* The Menu.app */;
 			productType = "com.apple.product-type.application";
@@ -357,6 +367,8 @@
 				Base,
 			);
 			mainGroup = 9CF6FD392B1A45A0003B74AB;
+			packageReferences = (
+			);
 			productRefGroup = 9CF6FD432B1A45A0003B74AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

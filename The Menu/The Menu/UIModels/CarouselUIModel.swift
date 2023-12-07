@@ -4,10 +4,12 @@ struct CarouselItemUIModel: Decodable, Identifiable {
     let id = UUID()
     let itemId: Int
     let imageUrl: URL
+    let itemTitle: String
     
     private enum CodingKeys: String, CodingKey {
         case itemId
         case imageUrl
+        case itemTitle
     }
 }
 
