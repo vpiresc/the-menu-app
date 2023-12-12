@@ -10,8 +10,8 @@ struct ContentView: View {
                 ForEach(viewModel.components, id: \.id) { component in
                     component.render()
                 }
-                .navigationTitle("Promotions Menu")
-            }.id(UUID())
+            }.navigationTitle("Promotions Menu")
+                .id(UUID())
                 .listStyle(.plain)
                 .task {
                 await viewModel.load()
