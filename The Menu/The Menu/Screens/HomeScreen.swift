@@ -14,8 +14,8 @@ struct ContentView: View {
                 .id(UUID())
                 .listStyle(.plain)
                 .task {
-                await viewModel.load()
-            }
+                    await viewModel.load()
+                }
         }
     }
 }

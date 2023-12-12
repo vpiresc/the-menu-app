@@ -30,6 +30,14 @@ class Navigator {
             } else {
                 destinationView = EmptyView().toAnyView()
             }
+        case .menuComments:
+           if let payload = payload as? RowUIModel {
+                destinationView = MenuCommentsScreen()
+                    .navigationTitle(payload.title)
+                    .toAnyView()
+            } else {
+                destinationView = EmptyView().toAnyView()
+            }
         }
         
         switch action.type {

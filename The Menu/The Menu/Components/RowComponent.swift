@@ -30,7 +30,8 @@ struct RowComponent: UIComponent {
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
             }
-        }.padding()
+        }.frame(maxWidth: .infinity, alignment: .leading)
+            .padding()
             .toAnyView()
     }
 }
