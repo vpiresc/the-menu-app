@@ -18,9 +18,17 @@ struct RowComponent: UIComponent {
             }
             
             VStack(alignment: .leading) {
-                Text(uiModel.title).font(.system(size: 18))
-                Text(uiModel.subTitle ?? "").opacity(0.4).font(.system(size: 16))
-                Text(uiModel.description ?? "").font(.system(size: 14))
+                Text(uiModel.title)
+                    .font(.system(size: 18))
+                    .foregroundColor(.black)
+                Text(uiModel.subTitle ?? "")
+                    .opacity(0.4)
+                    .font(.system(size: 16))
+                    .foregroundColor(.black)
+                Text(uiModel.description ?? "")
+                    .font(.system(size: 14))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.leading)
             }
         }.padding()
             .toAnyView()

@@ -63,6 +63,24 @@ app.get("/menu-item-detail/:itemId", (req, res) => {
                 data: {
                     rating: item.rating
                 }
+            },
+            {
+                type: "list",
+                data: {
+                    rows: [
+                        {
+                            id: 1,
+                            title: "I love it",
+                            
+                            imageUrl: "https://img.freepik.com/free-photo/young-pretty-woman-eating-pizza-pizza-bar_1303-20333.jpg?w=2000&t=st=1702400419~exp=1702401019~hmac=5db3063133fc5a5a8e12542aa0187b91f10beb089b9d6ea7b7676b4d01a6907e",
+                            description: "Ready in under 20 minutes, makes for a satisfying weeknight treat for one."
+                    }
+                ],
+                action: {
+                    type: "push",
+                    destination: "menuItemDetail"
+                }
+                }
             }
         ]
     }
