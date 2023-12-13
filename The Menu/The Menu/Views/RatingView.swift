@@ -1,8 +1,14 @@
 import Foundation
 import SwiftUI
 
+enum RatingSize: CGFloat {
+    case small = 10
+    case normal = 20
+}
+
 struct RatingView: View {
     @Binding var rating: Int?
+    var size: RatingSize = .normal
     
     private func starType(index: Int) -> String {
         if let rating = self.rating {
@@ -15,9 +21,9 @@ struct RatingView: View {
     var body: some View {
         HStack {
             ForEach(1...5, id: \.self) { index in
-                Image(systemName: self.starType(index: index))
+                Image(systemName: self.starType(index: index)).resizable()
                     .foregroundColor(Color.orange)
-                
+                    .frame(width: size.rawValue, height: size.rawValue)
             }
         }
     }

@@ -51,54 +51,56 @@ app.get("/menu-comments", (req, res) => {
                 }
             },
             {
-                type: "list",
+                type: "commentList",
                 data: {
-                    rows: [
+                    comments: [
                         {
                             id: 1,
                             title: "Appetizer",
                             subTitle: "This is a great appetizer!",
                             imageUrl: "https://img.freepik.com/free-photo/pretty-woman-beret-sniffs-fragrant-donut-portrait-girl-with-curly-hair-isolated-red-wall_197531-14359.jpg?w=2000&t=st=1701959556~exp=1701960156~hmac=09c3d07cf36b5b302c459f1d3ba0d717cb6e1ea0f92fe14cc2c0899ca4f5c412",
-                            description: "Every meal featured among this menu has a specific meaning behind it."
+                            description: "Every meal featured among this menu has a specific meaning behind it.",
+                            rating: 5
                         },
                         {
                             id: 2,
                             title: "Nice discount",
                             subTitle: "This is a great discount!",
-                            imageUrl: "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559"
+                            imageUrl: "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559",
+                            rating: 4
                         },
                         {
                             id: 3,
                             title: "I love it!",
                             subTitle: "This is a great!",
                             imageUrl: "https://img.freepik.com/free-photo/young-pretty-woman-eating-pizza-pizza-bar_1303-20333.jpg?w=2000&t=st=1702400419~exp=1702401019~hmac=5db3063133fc5a5a8e12542aa0187b91f10beb089b9d6ea7b7676b4d01a6907e",
-                            description: "Ready in under 20 minutes, makes for a satisfying weeknight treat for one."
+                            description: "Ready in under 20 minutes, makes for a satisfying weeknight treat for one.",
+                            rating: 4
                         },
                         {
                             id: 4,
                             title: "Nice discount",
                             subTitle: "This is a great discount!",
-                            imageUrl: "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559"
+                            imageUrl: "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559",
+                            rating: 3
                         },
                         {
                             id: 5,
                             title: "Appetizer",
                             subTitle: "This is a great appetizer!",
                             imageUrl: "https://img.freepik.com/free-photo/pretty-woman-beret-sniffs-fragrant-donut-portrait-girl-with-curly-hair-isolated-red-wall_197531-14359.jpg?w=2000&t=st=1701959556~exp=1701960156~hmac=09c3d07cf36b5b302c459f1d3ba0d717cb6e1ea0f92fe14cc2c0899ca4f5c412",
-                            description: "Every meal featured among this menu has a specific meaning behind it."
+                            description: "Every meal featured among this menu has a specific meaning behind it.",
+                            rating: 2
                         },
                         {
                             id: 6,
                             title: "I love it!",
                             subTitle: "This is a great!",
                             imageUrl: "https://img.freepik.com/free-photo/young-pretty-woman-eating-pizza-pizza-bar_1303-20333.jpg?w=2000&t=st=1702400419~exp=1702401019~hmac=5db3063133fc5a5a8e12542aa0187b91f10beb089b9d6ea7b7676b4d01a6907e",
-                            description: "Ready in under 20 minutes, makes for a satisfying weeknight treat for one."
+                            description: "Ready in under 20 minutes, makes for a satisfying weeknight treat for one.",
+                            rating: 1
                         }
-                    ],
-                    action: {
-                        type: "push",
-                        destination: "menuItemDetail"
-                    }
+                    ]
                 }
             }
         ]
@@ -132,21 +134,18 @@ app.get("/menu-item-detail/:itemId", (req, res) => {
                 }
             },
             {
-                type: "list",
+                type: "commentList",
                 data: {
-                    rows: [
+                    comments: [
                         {
                             id: 1,
                             title: "I love it!",
                             subTitle: "This is a great!",
                             imageUrl: "https://img.freepik.com/free-photo/young-pretty-woman-eating-pizza-pizza-bar_1303-20333.jpg?w=2000&t=st=1702400419~exp=1702401019~hmac=5db3063133fc5a5a8e12542aa0187b91f10beb089b9d6ea7b7676b4d01a6907e",
-                            description: "Ready in under 20 minutes, makes for a satisfying weeknight treat for one."
+                            description: "Ready in under 20 minutes, makes for a satisfying weeknight treat for one.",
+                            rating: 4
                         }
-                    ],
-                    action: {
-                        type: "push",
-                        destination: "menuComments"
-                    }
+                    ]
                 }
             }
         ]
@@ -203,7 +202,7 @@ app.get("/menu-list", (req, res) => {
                         }
                     ],
                     action: {
-                        type: "sheet",
+                        type: "push",
                         destination: "menuComments"
                     }
                 }

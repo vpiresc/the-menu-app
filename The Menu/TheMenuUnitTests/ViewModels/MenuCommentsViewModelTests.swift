@@ -24,27 +24,25 @@ final class MenuCommentsViewModelTests: XCTestCase {
                  "pageTitle": "Comments",
                  "components": [
                              {
-                                "type": "list",
+                                "type": "commentsList",
                                 "data": {
-                                        "rows": [
+                                        "comments": [
                                                  {
                                                     "id": 1,
                                                     "title": "Appetizer",
                                                     "subTitle": "This is a great appetizer!",
                                                     "imageUrl": "https://img.freepik.com/free-photo/pretty-woman-beret-sniffs-fragrant-donut-portrait-girl-with-curly-hair-isolated-red-wall_197531-14359.jpg?w=2000&t=st=1701959556~exp=1701960156~hmac=09c3d07cf36b5b302c459f1d3ba0d717cb6e1ea0f92fe14cc2c0899ca4f5c412",
-                                                    "description": "Every meal featured among this menu has a specific meaning behind it."
+                                                    "description": "Every meal featured among this menu has a specific meaning behind it.",
+                                                    "rating": 1
                                                  },
                                                  {
                                                     "id": 2,
                                                     "title": "Nice discount",
                                                     "subTitle": "This is a great discount!",
-                                                    "imageUrl": "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559"
+                                                    "imageUrl": "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559",
+                                                    "rating": 1
                                                  },
-                              ],
-                                    "action": {
-                                    "type": "push",
-                                    "destination": "menuItemDetail"
-                                 }
+                                ]
                              }
                          }
                      ]
@@ -74,27 +72,25 @@ func test_load_when_valid_json_with_two_components_should_be_success() async {
                         }
                     },
                     {
-                        "type": "list",
+                        "type": "commentsList",
                         "data": {
-                                "rows": [
+                                "comments": [
                                 {
                                             "id": 1,
                                             "title": "Appetizer",
                                             "subTitle": "This is a great appetizer!",
                                             "imageUrl": "https://img.freepik.com/free-photo/pretty-woman-beret-sniffs-fragrant-donut-portrait-girl-with-curly-hair-isolated-red-wall_197531-14359.jpg?w=2000&t=st=1701959556~exp=1701960156~hmac=09c3d07cf36b5b302c459f1d3ba0d717cb6e1ea0f92fe14cc2c0899ca4f5c412",
-                                            "description": "Every meal featured among this menu has a specific meaning behind it."
+                                            "description": "Every meal featured among this menu has a specific meaning behind it.",
+                                            "rating": 1
                                 },
                                 {
                                             "id": 2,
                                             "title": "Nice discount",
                                             "subTitle": "This is a great discount!",
-                                            "imageUrl": "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559"
+                                            "imageUrl": "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559",
+                                            "rating": 1
                                 },
-             ],
-                                "action": {
-                                            "type": "push",
-                                            "destination": "menuItemDetail"
-                        }
+                        ]
                     }
                 }
             ]
@@ -142,27 +138,25 @@ func test_load_when_valid_json_with_two_components_should_be_success() async {
                                             }
                                         },
                                         {
-                                                            "type": "list",
+                                                            "type": "commentList",
                                                             "data": {
-                                                                "rows": [
+                                                                "comments": [
                                                     {
                                                                         "id": 1,
                                                                         "title": "Appetizer",
                                                                         "subTitle": "This is a great appetizer!",
                                                                         "imageUrl": "https://img.freepik.com/free-photo/pretty-woman-beret-sniffs-fragrant-donut-portrait-girl-with-curly-hair-isolated-red-wall_197531-14359.jpg?w=2000&t=st=1701959556~exp=1701960156~hmac=09c3d07cf36b5b302c459f1d3ba0d717cb6e1ea0f92fe14cc2c0899ca4f5c412",
-                                                                        "description": "Every meal featured among this menu has a specific meaning behind it."
+                                                                        "description": "Every meal featured among this menu has a specific meaning behind it.",
+                                                                        "rating": 1
                                                     },
                                                     {
                                                                         "id": 2,
                                                                         "title": "Nice discount",
                                                                         "subTitle": "This is a great discount!",
-                                                                        "imageUrl": "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559"
+                                                                        "imageUrl": "https://img.freepik.com/free-photo/attractive-woman-with-afro-hair-surrounded-by-peanut-butter-jellly-sandwiches_273609-36508.jpg?w=2000&t=st=1701959653~exp=1701960253~hmac=6aad1d5f30ff75e91299f171ed0cc8cdfc58dd8dd0ae9765563a5e2d30129559",
+                                                                        "rating": 1
                                                     },
-                                 ],
-                                                           "action": {
-                                                                "type": "push",
-                                                                "destination": "menuItemDetail"
-                                            }
+                                            ]
                                         }
                                     }
                                 ]
