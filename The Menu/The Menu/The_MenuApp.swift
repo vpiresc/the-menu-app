@@ -11,7 +11,7 @@ import SwiftUI
 struct The_MenuApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
+            MenuListViewFactory.make()
         }
     }
 }

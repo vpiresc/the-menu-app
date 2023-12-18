@@ -14,7 +14,7 @@ struct SheetView<V: View>: View {
         }
     }
 }
-
+@MainActor 
 class Navigator {
     func perform<V: View>(action: Action, payload: Any? = nil, content: @escaping () -> V) -> AnyView {
         var destinationView: AnyView!
@@ -22,9 +22,9 @@ class Navigator {
         switch action.destination {
         case .menuItemDetail:
             if let payload = payload as? CarouselItemUIModel {
-                destinationView = MenuItemDetailScreen(itemId: payload.itemId).toAnyView()
+                destinationView = MenuItemDetailViewFactory.make(itemId: payload.itemId).toAnyView()
             } else if let payload = payload as? RowUIModel {
-                destinationView = MenuItemDetailScreen(itemId: payload.id)
+                destinationView = MenuItemDetailViewFactory.make(itemId: payload.id)
                     .navigationTitle(payload.title)
                     .toAnyView()
             } else {
@@ -32,7 +32,7 @@ class Navigator {
             }
         case .menuComments:
            if let payload = payload as? RowUIModel {
-                destinationView = MenuCommentsScreen()
+               destinationView = MenuCommentsViewFactory.make().toAnyView()
                     .navigationTitle(payload.title)
                     .toAnyView()
             } else {
