@@ -6,7 +6,7 @@ final class GetMenuItemDetailScreenModelUseCaseImplTests: XCTestCase {
     // MARK: - Subject under test
     
     var sut: GetMenuItemDetailScreenModelUseCase!
-    var         repositoryMock: ScreenModelRepositoryMock!
+    var repositoryMock: ScreenModelRepositoryMock!
     
     // MARK: - Test lifecycle
     
@@ -25,7 +25,7 @@ final class GetMenuItemDetailScreenModelUseCaseImplTests: XCTestCase {
     
     func setupMenuItemDetailScreenModelRepository() {
         repositoryMock = ScreenModelRepositoryMock()
-        sut = GetMenuItemDetailScreenModelUseCaseImpl(repository:         repositoryMock)
+        sut = GetMenuItemDetailScreenModelUseCaseImpl(repository: repositoryMock)
     }
     
     // MARK: Tests

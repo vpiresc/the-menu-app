@@ -2,7 +2,6 @@ import SwiftUI
 
 struct MenuListView<VM: MenuListViewModel>: View {
     @ObservedObject var viewModel: VM
-    @Environment(\.defaultMinListRowHeight) var minRowHeight
     
     var body: some View {
         NavigationView {
