@@ -2,6 +2,7 @@ struct ScreenModelData: Decodable {
     let pageTitle: String
     let components: [ComponentModel]
 }
+
 @MainActor 
 extension ScreenModelData {
     func buildComponents() throws -> [UIComponent] {

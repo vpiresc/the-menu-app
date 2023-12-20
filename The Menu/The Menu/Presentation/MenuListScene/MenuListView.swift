@@ -28,9 +28,3 @@ extension MenuListView: MenuListViewModelDisplayLogic {
         }
     }
 }
-
-struct MenuListView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuListViewFactory.make()
-    }
-}

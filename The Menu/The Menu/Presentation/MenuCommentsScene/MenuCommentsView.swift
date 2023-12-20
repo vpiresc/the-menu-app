@@ -28,9 +28,3 @@ extension MenuCommentsView: MenuCommentsViewModelDisplayLogic {
     }
 }
 
-struct MenuCommentsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuCommentsViewFactory.make()
-    }
-}
-

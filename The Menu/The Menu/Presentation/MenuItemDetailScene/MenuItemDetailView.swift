@@ -24,9 +24,3 @@ extension MenuItemDetailView: MenuItemDetailViewModelDisplayLogic {
         }
     }
 }
-
-struct MenuItemDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuItemDetailViewFactory.make(itemId: 1)
-    }
-}
