@@ -1,3 +1,3 @@
 protocol GetMenuListScreenModelUseCase {
-    func execute() async throws -> [UIComponent]
+    func execute() async throws -> ScreenModelData
 }

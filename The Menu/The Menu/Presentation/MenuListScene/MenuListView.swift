@@ -10,7 +10,7 @@ struct MenuListView<VM: MenuListViewModel>: View {
                     component.render()
                 }
             }.id(UUID())
-            .navigationTitle("Promotions Menu")
+                .navigationTitle(viewModel.pageTitle)
             .listStyle(.plain)
             .task {
                 await displayData()

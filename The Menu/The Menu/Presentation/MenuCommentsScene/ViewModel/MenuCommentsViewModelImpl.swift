@@ -2,7 +2,8 @@ import Foundation
 import SwiftUI
 
 @MainActor
-class MenuCommentsViewModelImpl: MenuCommentsViewModel {    
+class MenuCommentsViewModelImpl: MenuCommentsViewModel {
+    @Published var pageTitle: String = ""
     @Published var components: [UIComponent] = []
     
     private let useCase: GetMenuCommentsScreenModelUseCase
@@ -15,7 +16,9 @@ class MenuCommentsViewModelImpl: MenuCommentsViewModel {
 extension MenuCommentsViewModelImpl {
     func prepareData() async throws {
         do {
-            components = try await useCase.execute()
+            let screenModelData = try await useCase.execute()
+            pageTitle = screenModelData.pageTitle
+            components = try screenModelData.buildComponents()
         } catch {
             throw(ComponentError.unableToLoad)
         }

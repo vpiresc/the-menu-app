@@ -1,18 +1,15 @@
 import Foundation
 
-final class GetMenuCommentsScreenModelUseCaseImpl: ObservableObject, GetMenuCommentsScreenModelUseCase {
+final class GetMenuCommentsScreenModelUseCaseImpl: GetMenuCommentsScreenModelUseCase {
     private let repository: ScreenModelRepository
-    @Published private var components: [UIComponent] = []
-
+    
     init(repository: ScreenModelRepository) {
         self.repository = repository
     }
     
-    func execute() async throws -> [UIComponent] {
+    func execute() async throws -> ScreenModelData {
         do {
-            let screenModelData = try await repository.fetchScreenModel(Constants.Urls.menuComments)
-            components = try await screenModelData.buildComponents()
-            return components
+            return try await repository.fetchScreenModel(Constants.Urls.menuComments)
         } catch {
             throw(ComponentError.unableToLoad)
         }

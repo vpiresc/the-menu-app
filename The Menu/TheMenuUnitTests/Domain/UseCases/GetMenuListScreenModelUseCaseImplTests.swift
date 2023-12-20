@@ -34,7 +34,7 @@ final class GetMenuListScreenModelUseCaseImplTests: XCTestCase {
             let screenModel = try await sut.execute()
             // Then
             XCTAssertNotNil(screenModel)
-            XCTAssertEqual(screenModel.count, 1)
+            XCTAssertEqual(screenModel.components.count, 1)
         } catch {
             fatalError("execute should not return any error")
         }
@@ -50,7 +50,7 @@ final class GetMenuListScreenModelUseCaseImplTests: XCTestCase {
             let screenModel = try await sut.execute()
             // Then
             XCTAssertNotNil(screenModel)
-            XCTAssertEqual(screenModel.count, 2)
+            XCTAssertEqual(screenModel.components.count, 2)
         } catch {
             fatalError("execute should not return any error")
         }

@@ -2,6 +2,7 @@ import Foundation
 
 @MainActor
 class MenuListViewModelImpl: MenuListViewModel {
+    @Published var pageTitle: String = ""
     @Published var components: [UIComponent] = []
     
     private let useCase: GetMenuListScreenModelUseCase
@@ -14,7 +15,9 @@ class MenuListViewModelImpl: MenuListViewModel {
 extension MenuListViewModelImpl {
     func prepareData() async throws {
         do {
-            components = try await useCase.execute()
+            let screenModelData = try await useCase.execute()
+            pageTitle = screenModelData.pageTitle
+            components = try screenModelData.buildComponents()
         } catch {
             throw(ComponentError.unableToLoad)
         }

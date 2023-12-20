@@ -11,6 +11,7 @@ protocol MenuCommentsViewModelInputLogic {
 
 @MainActor
 protocol MenuCommentsViewModelOutputLogic {
+    var pageTitle: String { get }
     var components: [UIComponent] { get }
 }
 

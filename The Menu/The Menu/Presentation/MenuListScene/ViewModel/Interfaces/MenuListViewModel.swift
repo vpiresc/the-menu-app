@@ -11,6 +11,7 @@ protocol MenuListViewModelInputLogic {
 
 @MainActor
 protocol MenuListViewModelOutputLogic {
+    var pageTitle: String { get }
     var components: [UIComponent] { get }
 }
 

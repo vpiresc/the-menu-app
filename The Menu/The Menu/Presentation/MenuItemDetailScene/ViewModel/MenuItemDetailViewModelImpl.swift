@@ -14,7 +14,8 @@ class MenuItemDetailViewModelImpl: MenuItemDetailViewModel {
 extension MenuItemDetailViewModelImpl {
     func prepareData(itemId: Int) async throws {
         do {
-            components = try await useCase.execute(with: itemId)
+            let screenModelData = try await useCase.execute(with: itemId)
+            components = try screenModelData.buildComponents()
         } catch {
             throw(ComponentError.unableToLoad)
         }
