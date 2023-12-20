@@ -22,6 +22,10 @@
 		9C766CD32B30C78300A57EBD /* MenuCommentsViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C766CD22B30C78300A57EBD /* MenuCommentsViewModelSpy.swift */; };
 		9C766CD52B30C7A800A57EBD /* MenuCommentsViewModelImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C766CD42B30C7A800A57EBD /* MenuCommentsViewModelImplTests.swift */; };
 		9C766CD72B30C7E100A57EBD /* MenuCommentsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C766CD62B30C7E100A57EBD /* MenuCommentsViewTests.swift */; };
+		9C8C64F22B337707009B2AE1 /* TheMenuSplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C64F02B3375B1009B2AE1 /* TheMenuSplashScreenView.swift */; };
+		9C8C64F52B3377BD009B2AE1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9C8C64F42B3377BD009B2AE1 /* Lottie */; };
+		9C8C64FB2B338064009B2AE1 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C64FA2B338064009B2AE1 /* LottieView.swift */; };
+		9C8C64FD2B338218009B2AE1 /* splash_screen_food_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C64FC2B338218009B2AE1 /* splash_screen_food_animation.json */; };
 		9C8F82842B2C9B37003C2DEE /* ComponentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F82832B2C9B37003C2DEE /* ComponentError.swift */; };
 		9C8F82862B2C9FB7003C2DEE /* ComponentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F82852B2C9FB7003C2DEE /* ComponentType.swift */; };
 		9C8F82892B2CB652003C2DEE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F82882B2CB652003C2DEE /* NetworkError.swift */; };
@@ -78,7 +82,6 @@
 		9CF6FD822B1A6017003B74AB /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6FD812B1A6017003B74AB /* View+Extensions.swift */; };
 		9CF6FD852B1A6101003B74AB /* MenuListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6FD842B1A6101003B74AB /* MenuListViewModelImpl.swift */; };
 		9CF6FD872B1A626A003B74AB /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6FD862B1A626A003B74AB /* Dictionary+Extensions.swift */; };
-		9CF6FD892B1A6BC6003B74AB /* menu-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF6FD882B1A6BC6003B74AB /* menu-list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		9C766CD22B30C78300A57EBD /* MenuCommentsViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommentsViewModelSpy.swift; sourceTree = "<group>"; };
 		9C766CD42B30C7A800A57EBD /* MenuCommentsViewModelImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommentsViewModelImplTests.swift; sourceTree = "<group>"; };
 		9C766CD62B30C7E100A57EBD /* MenuCommentsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommentsViewTests.swift; sourceTree = "<group>"; };
+		9C8C64F02B3375B1009B2AE1 /* TheMenuSplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMenuSplashScreenView.swift; sourceTree = "<group>"; };
+		9C8C64FA2B338064009B2AE1 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		9C8C64FC2B338218009B2AE1 /* splash_screen_food_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = splash_screen_food_animation.json; path = ../../../../../../../.Trash/splash_screen_food_animation.json; sourceTree = "<group>"; };
 		9C8F82832B2C9B37003C2DEE /* ComponentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentError.swift; sourceTree = "<group>"; };
 		9C8F82852B2C9FB7003C2DEE /* ComponentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentType.swift; sourceTree = "<group>"; };
 		9C8F82882B2CB652003C2DEE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -166,7 +172,6 @@
 		9CF6FD812B1A6017003B74AB /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		9CF6FD842B1A6101003B74AB /* MenuListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewModelImpl.swift; sourceTree = "<group>"; };
 		9CF6FD862B1A626A003B74AB /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
-		9CF6FD882B1A6BC6003B74AB /* menu-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "menu-list.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8C64F52B3377BD009B2AE1 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +276,24 @@
 				9C766CD22B30C78300A57EBD /* MenuCommentsViewModelSpy.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9C8C64EF2B3374C7009B2AE1 /* SplashScreenScene */ = {
+			isa = PBXGroup;
+			children = (
+				9C8C64F02B3375B1009B2AE1 /* TheMenuSplashScreenView.swift */,
+				9C8C64F82B338047009B2AE1 /* Animation */,
+			);
+			path = SplashScreenScene;
+			sourceTree = "<group>";
+		};
+		9C8C64F82B338047009B2AE1 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				9C8C64FA2B338064009B2AE1 /* LottieView.swift */,
+				9C8C64FC2B338218009B2AE1 /* splash_screen_food_animation.json */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		9C8F82812B2C9B0F003C2DEE /* Common */ = {
@@ -541,6 +565,7 @@
 		9CA862AA2B1F4DF200737E46 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9C8C64EF2B3374C7009B2AE1 /* SplashScreenScene */,
 				9C8F82A32B2CC7F9003C2DEE /* MenuListScene */,
 				9C8F82A82B2CEBDC003C2DEE /* MenuItemDetailScene */,
 				9C8F82A92B2CEBEA003C2DEE /* MenuCommentsScene */,
@@ -588,7 +613,6 @@
 				9CF6FD802B1A6008003B74AB /* Extensions */,
 				9C8F82A22B2CC7D5003C2DEE /* Components */,
 				9CF6FD452B1A45A0003B74AB /* The_MenuApp.swift */,
-				9CF6FD882B1A6BC6003B74AB /* menu-list.json */,
 				9CF6FD492B1A45A2003B74AB /* Assets.xcassets */,
 				9CF6FD4B2B1A45A2003B74AB /* Preview Content */,
 			);
@@ -687,6 +711,7 @@
 			);
 			name = "The Menu";
 			packageProductDependencies = (
+				9C8C64F42B3377BD009B2AE1 /* Lottie */,
 			);
 			productName = "The Menu";
 			productReference = 9CF6FD422B1A45A0003B74AB /* The Menu.app */;
@@ -721,6 +746,7 @@
 			);
 			mainGroup = 9CF6FD392B1A45A0003B74AB;
 			packageReferences = (
+				9C8C64F32B3377BD009B2AE1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 9CF6FD432B1A45A0003B74AB /* Products */;
 			projectDirPath = "";
@@ -745,8 +771,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF6FD4D2B1A45A2003B74AB /* Preview Assets.xcassets in Resources */,
-				9CF6FD892B1A6BC6003B74AB /* menu-list.json in Resources */,
 				9CF6FD4A2B1A45A2003B74AB /* Assets.xcassets in Resources */,
+				9C8C64FD2B338218009B2AE1 /* splash_screen_food_animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +836,7 @@
 				9C8F82D12B308570003C2DEE /* ScreenModelRepositoryImpl.swift in Sources */,
 				9C8F82C82B307ADF003C2DEE /* GetMenuCommentsScreenModelUseCase.swift in Sources */,
 				9C8F82C02B307873003C2DEE /* GetMenuItemDetailScreenModelUseCase.swift in Sources */,
+				9C8C64FB2B338064009B2AE1 /* LottieView.swift in Sources */,
 				9CF6FD462B1A45A0003B74AB /* The_MenuApp.swift in Sources */,
 				9CA8629C2B1E1F1B00737E46 /* CarouselUIModel.swift in Sources */,
 				9C8F82B32B2CF760003C2DEE /* MenuItemDetailViewFactory.swift in Sources */,
@@ -830,6 +857,7 @@
 				9C8F82862B2C9FB7003C2DEE /* ComponentType.swift in Sources */,
 				9C8F82892B2CB652003C2DEE /* NetworkError.swift in Sources */,
 				9C8F82972B2CC327003C2DEE /* ScreenModelData.swift in Sources */,
+				9C8C64F22B337707009B2AE1 /* TheMenuSplashScreenView.swift in Sources */,
 				9C8F82922B2CB871003C2DEE /* ScreenModelResponse.swift in Sources */,
 				9CA862A72B1E3D2500737E46 /* Route.swift in Sources */,
 				9CADC93E2B29DCE800E9A243 /* CommentListComponent.swift in Sources */,
@@ -1082,6 +1110,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C8C64F32B3377BD009B2AE1 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C8C64F42B3377BD009B2AE1 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C8C64F32B3377BD009B2AE1 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CF6FD3A2B1A45A0003B74AB /* Project object */;
 }

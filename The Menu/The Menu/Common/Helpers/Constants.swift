@@ -9,4 +9,8 @@ struct Constants {
             return "\(baseUrl)/menu-item-detail/\(itemId)"
         }
     }
+    
+    struct Lottie {
+        static let foodAnimation = "splash_screen_food_animation"
+    }
 }
