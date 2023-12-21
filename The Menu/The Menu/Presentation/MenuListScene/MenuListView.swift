@@ -5,17 +5,19 @@ struct MenuListView<VM: MenuListViewModel>: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.components, id: \.id) { component in
-                    component.render()
-                }
-            }.id(UUID())
-                .navigationTitle(viewModel.pageTitle)
-            .listStyle(.plain)
-            .task {
-                await displayData()
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.components, id: \.id) { component in
+                        component.render()
+                    }
+                }.id(UUID())
+                    .navigationTitle(viewModel.pageTitle)
+                    .listStyle(.plain)
+                    .task {
+                        await displayData()
+                    }
             }
-        }
+        }.accentColor(.gray)
     }
 }
 

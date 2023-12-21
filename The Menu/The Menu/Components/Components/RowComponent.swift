@@ -30,6 +30,10 @@ struct RowComponent: UIComponent {
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
             }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .foregroundStyle(.gray)
+                .padding(.trailing)
         }.frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             .toAnyView()
