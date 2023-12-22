@@ -9,7 +9,7 @@ final class GetMenuCommentsScreenModelUseCaseImpl: GetMenuCommentsScreenModelUse
     
     func execute() async throws -> ScreenModelData {
         do {
-            return try await repository.fetchScreenModel(Constants.Urls.menuComments)
+            return try await repository.fetchScreenModel(Constants.Urls.menuComments).toData()
         } catch {
             throw(ComponentError.unableToLoad)
         }

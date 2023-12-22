@@ -9,7 +9,7 @@ final class GetMenuListScreenModelUseCaseImpl: GetMenuListScreenModelUseCase {
     
     func execute() async throws -> ScreenModelData {
         do {
-            return try await repository.fetchScreenModel(Constants.Urls.menuList)
+            return try await repository.fetchScreenModel(Constants.Urls.menuList).toData()
         } catch {
             throw(ComponentError.unableToLoad)
         }

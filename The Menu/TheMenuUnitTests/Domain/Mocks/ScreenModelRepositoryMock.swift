@@ -21,7 +21,7 @@ final class ScreenModelRepositoryMock: ScreenModelRepository {
         self.responseType = responseType
     }
   
-    func fetchScreenModel(_ resource: String) async throws -> The_Menu.ScreenModelData {
+    func fetchScreenModel(_ resource: String) async throws -> ScreenModelResponse {
         switch responseType {
         case .success:
             guard let data = jsonResponse.data(using: .utf8) else {
@@ -29,7 +29,7 @@ final class ScreenModelRepositoryMock: ScreenModelRepository {
             }
             do {
                 let screenModel = try JSONDecoder().decode(ScreenModelResponse.self, from: data)
-                return screenModel.toData()
+                return screenModel
             } catch {
                 throw error
             }

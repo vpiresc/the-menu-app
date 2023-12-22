@@ -114,7 +114,7 @@ app.get("/menu-item-detail/:itemId", (req, res) => {
 app.get("/menu-comments", (req, res) => {
 
     const model = {
-        pageTitle: "Comments",
+        pageTitle: "Menu Comments",
         components: [
             {
                 type: "featuredImage",

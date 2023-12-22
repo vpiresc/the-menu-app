@@ -9,7 +9,7 @@ final class GetMenuItemDetailScreenModelUseCaseImpl: GetMenuItemDetailScreenMode
     
     func execute(with itemId: Int) async throws -> ScreenModelData {
         do {
-            return try await repository.fetchScreenModel(Constants.Urls.menuItemDetail(itemId: itemId))
+            return try await repository.fetchScreenModel(Constants.Urls.menuItemDetail(itemId: itemId)).toData()
         } catch {
             throw(ComponentError.unableToLoad)
         }

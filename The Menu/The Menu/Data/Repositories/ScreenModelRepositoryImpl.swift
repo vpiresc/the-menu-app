@@ -3,7 +3,7 @@ import Foundation
 final class ScreenModelRepositoryImpl {}
 
 extension ScreenModelRepositoryImpl: ScreenModelRepository {
-    func fetchScreenModel(_ resource: String) async throws -> ScreenModelData {
+    func fetchScreenModel(_ resource: String) async throws -> ScreenModelResponse {
         guard let url = URL(string: resource) else {
             throw NetworkError.invalidUrl
         }
@@ -14,8 +14,8 @@ extension ScreenModelRepositoryImpl: ScreenModelRepository {
              throw NetworkError.invalidServerResponse
         }
         
-        let screenModelData = try JSONDecoder().decode(ScreenModelResponse.self, from: data)
+        let screenModelResponse = try JSONDecoder().decode(ScreenModelResponse.self, from: data)
         
-        return screenModelData.toData()
+        return screenModelResponse
     }
 }

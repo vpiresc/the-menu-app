@@ -8,7 +8,7 @@ struct MenuCommentsView<VM: MenuCommentsViewModel>: View {
             ForEach(viewModel.components, id: \.id) { component in
                 component.render()
             }
-        }.navigationTitle("Menu Comments")
+        }.navigationTitle(viewModel.pageTitle)
             .id(UUID())
             .listStyle(.plain)
             .task {
@@ -16,7 +16,6 @@ struct MenuCommentsView<VM: MenuCommentsViewModel>: View {
             }
     }
 }
-
 
 extension MenuCommentsView: MenuCommentsViewModelDisplayLogic {
     func displayData() async {
