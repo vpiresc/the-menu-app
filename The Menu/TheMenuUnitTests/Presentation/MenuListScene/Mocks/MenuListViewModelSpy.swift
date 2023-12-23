@@ -2,7 +2,7 @@
 
 final class MenuListViewModelSpy: MenuListViewModel {
     var pageTitle: String = ""
-    var components: [The_Menu.UIComponent] = []
+    var components: [UIComponent] = []
     var prepareDataWasCalled = 0
     
     func prepareData() async {

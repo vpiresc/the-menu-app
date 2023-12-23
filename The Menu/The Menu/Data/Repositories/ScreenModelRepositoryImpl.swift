@@ -1,14 +1,20 @@
 import Foundation
 
-final class ScreenModelRepositoryImpl {}
+final class ScreenModelRepositoryImpl {
+    let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+}
 
 extension ScreenModelRepositoryImpl: ScreenModelRepository {
     func fetchScreenModel(_ resource: String) async throws -> ScreenModelResponse {
         guard let url = URL(string: resource) else {
             throw NetworkError.invalidUrl
         }
-        
-        let (data, response) = try await URLSession.shared.data(from: url)
+        let (data, response) = try await session.data(from: url)
+
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
              throw NetworkError.invalidServerResponse

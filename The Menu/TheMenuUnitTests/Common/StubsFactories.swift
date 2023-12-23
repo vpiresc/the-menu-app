@@ -1,3 +1,4 @@
+import Foundation
 
 enum Stubs {
     static func makefetchScreenModelStub() -> String {
@@ -45,5 +46,25 @@ enum Stubs {
                   ]
                   }
                   """
+    }
+    
+    static func makeInvalidData() -> Data {
+        return Data("invalid_data".utf8)
+    }
+    
+    static func makeValidData() -> Data {
+        return Data(Stubs.makefetchScreenModelStub().utf8)
+    }
+    
+    static func makeUrl() -> URL {
+        return URL(string: "http://any-url.com")!
+    }
+    
+    static func makeError() -> Error {
+        return NSError(domain: "any_error", code: 0)
+    }
+    
+    static func makeHttpResponse(statusCode: Int = 200) -> HTTPURLResponse {
+        return HTTPURLResponse(url: makeUrl(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
     }
 }
