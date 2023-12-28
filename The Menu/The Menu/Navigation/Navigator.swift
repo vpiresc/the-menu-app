@@ -17,7 +17,7 @@ struct SheetView<V: View>: View {
 @MainActor 
 class Navigator {
     func perform<V: View>(action: Action, payload: Any? = nil, content: @escaping () -> V) -> AnyView {
-        var destinationView: AnyView!
+        var destinationView: AnyView
         
         switch action.destination {
         case .menuItemDetail:

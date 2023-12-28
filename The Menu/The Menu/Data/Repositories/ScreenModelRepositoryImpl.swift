@@ -9,12 +9,11 @@ final class ScreenModelRepositoryImpl {
 }
 
 extension ScreenModelRepositoryImpl: ScreenModelRepository {
-    func fetchScreenModel(_ resource: String) async throws -> ScreenModelResponse {
-        guard let url = URL(string: resource) else {
+    func fetchScreenModel(_ url: String) async throws -> ScreenModelResponse {
+        guard let url = URL(string: url) else {
             throw NetworkError.invalidUrl
         }
         let (data, response) = try await session.data(from: url)
-
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
              throw NetworkError.invalidServerResponse

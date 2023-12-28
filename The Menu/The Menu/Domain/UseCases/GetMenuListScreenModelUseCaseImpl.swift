@@ -11,7 +11,7 @@ final class GetMenuListScreenModelUseCaseImpl: GetMenuListScreenModelUseCase {
         do {
             return try await repository.fetchScreenModel(Constants.Urls.menuList).toData()
         } catch {
-            throw(ComponentError.unableToLoad)
+            throw(ComponentError.unableToFetch)
         }
     }
 }

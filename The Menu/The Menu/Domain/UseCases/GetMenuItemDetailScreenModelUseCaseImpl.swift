@@ -11,7 +11,7 @@ final class GetMenuItemDetailScreenModelUseCaseImpl: GetMenuItemDetailScreenMode
         do {
             return try await repository.fetchScreenModel(Constants.Urls.menuItemDetail(itemId: itemId)).toData()
         } catch {
-            throw(ComponentError.unableToLoad)
+            throw(ComponentError.unableToFetch)
         }
     }
 }

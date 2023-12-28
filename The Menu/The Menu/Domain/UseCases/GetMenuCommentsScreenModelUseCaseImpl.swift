@@ -11,7 +11,7 @@ final class GetMenuCommentsScreenModelUseCaseImpl: GetMenuCommentsScreenModelUse
         do {
             return try await repository.fetchScreenModel(Constants.Urls.menuComments).toData()
         } catch {
-            throw(ComponentError.unableToLoad)
+            throw(ComponentError.unableToFetch)
         }
     }
 }
