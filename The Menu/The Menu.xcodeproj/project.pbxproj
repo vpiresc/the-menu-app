@@ -73,6 +73,7 @@
 		9CADC93A2B29DC5A00E9A243 /* CommentListUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CADC9392B29DC5A00E9A243 /* CommentListUIModel.swift */; };
 		9CADC93C2B29DCCE00E9A243 /* CommentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CADC93B2B29DCCE00E9A243 /* CommentComponent.swift */; };
 		9CADC93E2B29DCE800E9A243 /* CommentListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CADC93D2B29DCE800E9A243 /* CommentListComponent.swift */; };
+		9CAFC8582B41C2C600FBCAF7 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFC8572B41C2C600FBCAF7 /* SheetView.swift */; };
 		9CF6FD462B1A45A0003B74AB /* The_MenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6FD452B1A45A0003B74AB /* The_MenuApp.swift */; };
 		9CF6FD482B1A45A0003B74AB /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6FD472B1A45A0003B74AB /* MenuListView.swift */; };
 		9CF6FD4A2B1A45A2003B74AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF6FD492B1A45A2003B74AB /* Assets.xcassets */; };
@@ -164,6 +165,7 @@
 		9CADC9392B29DC5A00E9A243 /* CommentListUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListUIModel.swift; sourceTree = "<group>"; };
 		9CADC93B2B29DCCE00E9A243 /* CommentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentComponent.swift; sourceTree = "<group>"; };
 		9CADC93D2B29DCE800E9A243 /* CommentListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListComponent.swift; sourceTree = "<group>"; };
+		9CAFC8572B41C2C600FBCAF7 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		9CF6FD422B1A45A0003B74AB /* The Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF6FD452B1A45A0003B74AB /* The_MenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_MenuApp.swift; sourceTree = "<group>"; };
 		9CF6FD472B1A45A0003B74AB /* MenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListView.swift; sourceTree = "<group>"; };
@@ -563,6 +565,7 @@
 			children = (
 				9CA862A02B1E20FF00737E46 /* CarouselView.swift */,
 				9CA862B72B1F66F600737E46 /* RatingView.swift */,
+				9CAFC8572B41C2C600FBCAF7 /* SheetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -850,6 +853,7 @@
 				9CA862B42B1F64E700737E46 /* RatingUIModel.swift in Sources */,
 				9C8F82A72B2CC87B003C2DEE /* MenuListViewModel.swift in Sources */,
 				9C8F82D12B308570003C2DEE /* ScreenModelRepositoryImpl.swift in Sources */,
+				9CAFC8582B41C2C600FBCAF7 /* SheetView.swift in Sources */,
 				9C8F82C82B307ADF003C2DEE /* GetMenuCommentsScreenModelUseCase.swift in Sources */,
 				9C8F82C02B307873003C2DEE /* GetMenuItemDetailScreenModelUseCase.swift in Sources */,
 				9C8C64FB2B338064009B2AE1 /* LottieView.swift in Sources */,

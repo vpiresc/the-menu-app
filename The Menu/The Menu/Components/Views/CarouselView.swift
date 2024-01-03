@@ -3,7 +3,7 @@ import SwiftUI
 struct CarouselView: View {
     
     let uiModel: CarouselUIModel
-    let navigator: Navigator
+    let navigator: NavigatorProtocol
     
     var body: some View {
         ScrollView(.horizontal) {

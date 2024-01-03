@@ -3,11 +3,10 @@ struct ScreenModelData: Decodable {
     let components: [ComponentModel]
 }
 
-@MainActor 
 extension ScreenModelData {
     func buildComponents() throws -> [UIComponent] {
         var components: [UIComponent] = []
-        let navigator = Navigator()
+        let navigator: NavigatorProtocol = Navigator()
         for component in self.components {
             switch component.type {
             case .featuredImage:
