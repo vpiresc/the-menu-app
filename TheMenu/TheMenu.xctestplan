@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "24FC7912-4436-447F-A668-7A0B2F168F5D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TheMenu.xcodeproj",
+        "identifier" : "9C5143632B5FF21900C15A2A",
+        "name" : "TheMenuTests"
+      }
+    }
+  ],
+  "version" : 1
+}
