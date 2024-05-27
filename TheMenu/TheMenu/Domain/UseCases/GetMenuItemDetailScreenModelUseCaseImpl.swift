@@ -1,15 +1,15 @@
 import Foundation
 
 final class GetMenuItemDetailScreenModelUseCaseImpl: GetMenuItemDetailScreenModelUseCase {
-    private let repository: ScreenModelRepository
+    private let repository: MenuDetailsRepository
 
-    init(repository: ScreenModelRepository) {
+    init(repository: MenuDetailsRepository) {
         self.repository = repository
     }
     
     func execute(with itemId: Int) async throws -> ScreenModelData {
         do {
-            return try await repository.fetchScreenModel(Constants.Urls.menuItemDetail(itemId: itemId)).toData()
+            return try await repository.fetchMenuDetails(itemId: itemId).toData()
         } catch {
             throw(ComponentError.unableToFetch)
         }

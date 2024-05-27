@@ -6,26 +6,20 @@ final class GetMenuItemDetailScreenModelUseCaseImplTests: XCTestCase {
     // MARK: - Subject under test
     
     var sut: GetMenuItemDetailScreenModelUseCase!
-    var repositoryMock: ScreenModelRepositoryMock!
+    var repositoryMock: MenuDetailsRepositoryMock!
     
     // MARK: - Test lifecycle
     
     override func setUp() {
         super.setUp()
-        setupMenuItemDetailScreenModelRepository()
+        repositoryMock = MenuDetailsRepositoryMock()
+        sut = GetMenuItemDetailScreenModelUseCaseImpl(repository: repositoryMock)
     }
     
     override func tearDown() {
         sut = nil
         repositoryMock = nil
         super.tearDown()
-    }
-    
-    // MARK: - Test setup
-    
-    func setupMenuItemDetailScreenModelRepository() {
-        repositoryMock = ScreenModelRepositoryMock()
-        sut = GetMenuItemDetailScreenModelUseCaseImpl(repository: repositoryMock)
     }
     
     // MARK: Tests

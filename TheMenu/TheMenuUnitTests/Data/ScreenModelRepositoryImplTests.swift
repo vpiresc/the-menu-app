@@ -35,7 +35,7 @@ final class ScreenModelRepositoryImplTests: XCTestCase {
         
         // When
         do {
-            let screenModelResponse = try await sut.fetchScreenModel(Stubs.makeUrl().absoluteString)
+            let screenModelResponse = try await sut.fetchScreenModel()
             
             // Then
             XCTAssertNotNil(screenModelResponse)
@@ -54,7 +54,7 @@ final class ScreenModelRepositoryImplTests: XCTestCase {
         
         // When
         do {
-            _ = try await sut.fetchScreenModel(Stubs.makeUrl().absoluteString)
+            _ = try await sut.fetchScreenModel()
             
             fatalError("fetchScreenModel should not return any response")
         } catch {
@@ -73,31 +73,12 @@ final class ScreenModelRepositoryImplTests: XCTestCase {
         
         // When
         do {
-            _ = try await sut.fetchScreenModel(Stubs.makeUrl().absoluteString)
+            _ = try await sut.fetchScreenModel()
             
             fatalError("fetchScreenModel should not return any response")
         } catch {
             // Then
             XCTAssertEqual(error.localizedDescription, NetworkError.invalidServerResponse.localizedDescription)
-        }
-    }
-    
-    func test_whenFetchMenuListScreenModelWithInvalidUrl_shouldReturnNetworkError() async {
-        // Given
-        UrlProtocolMock.simulate(
-            data: Data(Stubs.makefetchScreenModelStub().utf8),
-            response: Stubs.makeHttpResponse(statusCode: 200),
-            error: nil
-        )
-        
-        // When
-        do {
-            _ = try await sut.fetchScreenModel("")
-            
-            fatalError("fetchScreenModel should not return any response")
-        } catch {
-            // Then
-            XCTAssertEqual(error.localizedDescription, NetworkError.invalidUrl.localizedDescription)
         }
     }
     
@@ -111,7 +92,7 @@ final class ScreenModelRepositoryImplTests: XCTestCase {
         
         // When
         do {
-            _ = try await sut.fetchScreenModel(Stubs.makeUrl().absoluteString)
+            _ = try await sut.fetchScreenModel()
             
             fatalError("fetchScreenModel should not return any response")
         } catch {

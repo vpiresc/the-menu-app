@@ -1,15 +1,15 @@
 import Foundation
 
 final class GetMenuCommentsScreenModelUseCaseImpl: GetMenuCommentsScreenModelUseCase {
-    private let repository: ScreenModelRepository
+    private let repository: MenuCommentsRepository
     
-    init(repository: ScreenModelRepository) {
+    init(repository: MenuCommentsRepository) {
         self.repository = repository
     }
     
     func execute() async throws -> ScreenModelData {
         do {
-            return try await repository.fetchScreenModel(Constants.Urls.menuComments).toData()
+            return try await repository.fetchMenuComments().toData()
         } catch {
             throw(ComponentError.unableToFetch)
         }

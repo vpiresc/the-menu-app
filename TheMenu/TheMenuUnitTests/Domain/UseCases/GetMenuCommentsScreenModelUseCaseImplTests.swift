@@ -6,13 +6,13 @@ final class GetMenuCommentsScreenModelUseCaseImplTests: XCTestCase {
     // MARK: - Subject under test
     
     var sut: GetMenuCommentsScreenModelUseCase!
-    var repositoryMock: ScreenModelRepositoryMock!
+    var repositoryMock: MenuCommentsRepositoryMock!
     
     // MARK: - Test lifecycle
     
     override func setUp() {
         super.setUp()
-        repositoryMock = ScreenModelRepositoryMock()
+        repositoryMock = MenuCommentsRepositoryMock()
         sut = GetMenuCommentsScreenModelUseCaseImpl(repository: repositoryMock)
     }
     

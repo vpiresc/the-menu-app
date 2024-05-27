@@ -9,3 +9,4 @@ struct MenuListViewFactory {
         return view
     }
 }
+
