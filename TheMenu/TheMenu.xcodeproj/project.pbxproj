@@ -11,6 +11,14 @@
 		9C09360D2C052320001E875E /* MenuDetailsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09360C2C052320001E875E /* MenuDetailsRepositoryMock.swift */; };
 		9C09360E2C0523EC001E875E /* MenuCommentsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09360A2C05230D001E875E /* MenuCommentsRepositoryMock.swift */; };
 		9C09360F2C0523EE001E875E /* MenuDetailsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09360C2C052320001E875E /* MenuDetailsRepositoryMock.swift */; };
+		9C0936112C067FA5001E875E /* MenuDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936102C067FA5001E875E /* MenuDetailsRepository.swift */; };
+		9C0936132C067FAD001E875E /* MenuCommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936122C067FAD001E875E /* MenuCommentsRepository.swift */; };
+		9C0936152C068004001E875E /* MenuDetailsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936142C068004001E875E /* MenuDetailsRepositoryImpl.swift */; };
+		9C0936172C06802D001E875E /* MenuCommentsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936162C06802D001E875E /* MenuCommentsRepositoryImpl.swift */; };
+		9C0936192C0680F3001E875E /* MenuDetailsRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936182C0680F3001E875E /* MenuDetailsRepositoryImplTests.swift */; };
+		9C09361A2C06812C001E875E /* MenuDetailsRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0936182C0680F3001E875E /* MenuDetailsRepositoryImplTests.swift */; };
+		9C09361C2C06817A001E875E /* MenuCommentsRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09361B2C06817A001E875E /* MenuCommentsRepositoryImplTests.swift */; };
+		9C09361D2C068191001E875E /* MenuCommentsRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C09361B2C06817A001E875E /* MenuCommentsRepositoryImplTests.swift */; };
 		9C5143672B5FF21900C15A2A /* TheMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5143662B5FF21900C15A2A /* TheMenuTests.swift */; };
 		9C5143722B5FF2FB00C15A2A /* ScreenModelRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C64FF2B36404A009B2AE1 /* ScreenModelRepositoryImplTests.swift */; };
 		9C5143732B5FF34000C15A2A /* ScreenModelRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F82D72B308A04003C2DEE /* ScreenModelRepositoryMock.swift */; };
@@ -112,6 +120,12 @@
 /* Begin PBXFileReference section */
 		9C09360A2C05230D001E875E /* MenuCommentsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommentsRepositoryMock.swift; sourceTree = "<group>"; };
 		9C09360C2C052320001E875E /* MenuDetailsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailsRepositoryMock.swift; sourceTree = "<group>"; };
+		9C0936102C067FA5001E875E /* MenuDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailsRepository.swift; sourceTree = "<group>"; };
+		9C0936122C067FAD001E875E /* MenuCommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommentsRepository.swift; sourceTree = "<group>"; };
+		9C0936142C068004001E875E /* MenuDetailsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailsRepositoryImpl.swift; sourceTree = "<group>"; };
+		9C0936162C06802D001E875E /* MenuCommentsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommentsRepositoryImpl.swift; sourceTree = "<group>"; };
+		9C0936182C0680F3001E875E /* MenuDetailsRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailsRepositoryImplTests.swift; sourceTree = "<group>"; };
+		9C09361B2C06817A001E875E /* MenuCommentsRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommentsRepositoryImplTests.swift; sourceTree = "<group>"; };
 		9C2FADF92B20BDD900CBFE4F /* TheMenuUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMenuUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C42C4942B21F2A7009FB751 /* TheMenu.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TheMenu.xctestplan; sourceTree = "<group>"; };
 		9C5143642B5FF21900C15A2A /* TheMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,6 +353,8 @@
 			children = (
 				9C8C65012B376BF0009B2AE1 /* Mocks */,
 				9C8C64FF2B36404A009B2AE1 /* ScreenModelRepositoryImplTests.swift */,
+				9C0936182C0680F3001E875E /* MenuDetailsRepositoryImplTests.swift */,
+				9C09361B2C06817A001E875E /* MenuCommentsRepositoryImplTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -444,6 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				9C8F82D02B308570003C2DEE /* ScreenModelRepositoryImpl.swift */,
+				9C0936142C068004001E875E /* MenuDetailsRepositoryImpl.swift */,
+				9C0936162C06802D001E875E /* MenuCommentsRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -550,6 +568,8 @@
 			isa = PBXGroup;
 			children = (
 				9C8F82CE2B308533003C2DEE /* ScreenModelRepository.swift */,
+				9C0936102C067FA5001E875E /* MenuDetailsRepository.swift */,
+				9C0936122C067FAD001E875E /* MenuCommentsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -866,8 +886,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C09361C2C06817A001E875E /* MenuCommentsRepositoryImplTests.swift in Sources */,
 				9C09360B2C05230D001E875E /* MenuCommentsRepositoryMock.swift in Sources */,
 				9C09360D2C052320001E875E /* MenuDetailsRepositoryMock.swift in Sources */,
+				9C0936192C0680F3001E875E /* MenuDetailsRepositoryImplTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C09361D2C068191001E875E /* MenuCommentsRepositoryImplTests.swift in Sources */,
 				9C5143742B5FF34E00C15A2A /* Stubs.swift in Sources */,
 				9C09360E2C0523EC001E875E /* MenuCommentsRepositoryMock.swift in Sources */,
 				9C5143762B5FF35600C15A2A /* GetMenuItemDetailScreenModelUseCaseImplTests.swift in Sources */,
@@ -882,6 +905,7 @@
 				9C51437B2B5FF36B00C15A2A /* MenuListViewModelImplTests.swift in Sources */,
 				9C51437C2B5FF36F00C15A2A /* MenuListViewTests.swift in Sources */,
 				9C51437E2B5FF37B00C15A2A /* MenuItemDetailViewModelSpy.swift in Sources */,
+				9C09361A2C06812C001E875E /* MenuDetailsRepositoryImplTests.swift in Sources */,
 				9C5143812B5FF38700C15A2A /* GetMenuCommentsScreenModelUseCaseMock.swift in Sources */,
 				9C5143832B5FF38D00C15A2A /* MenuCommentsViewModelImplTests.swift in Sources */,
 				9C5143672B5FF21900C15A2A /* TheMenuTests.swift in Sources */,
@@ -906,13 +930,16 @@
 			files = (
 				9C8F829F2B2CC58C003C2DEE /* GetMenuListScreenModelUseCaseImpl.swift in Sources */,
 				9C8F82942B2CC2C0003C2DEE /* ScreenModelResponse+Mapper.swift in Sources */,
+				9C0936132C067FAD001E875E /* MenuCommentsRepository.swift in Sources */,
 				9CF6FD482B1A45A0003B74AB /* MenuListView.swift in Sources */,
 				9CA862B22B1F5A4100737E46 /* TextRowComponent.swift in Sources */,
 				9CA862B02B1F5A1600737E46 /* TextRowUIModel.swift in Sources */,
 				9CA862B82B1F66F600737E46 /* RatingView.swift in Sources */,
+				9C0936152C068004001E875E /* MenuDetailsRepositoryImpl.swift in Sources */,
 				9C8F82842B2C9B37003C2DEE /* ComponentError.swift in Sources */,
 				9CA862A92B1E3DBA00737E46 /* Navigator.swift in Sources */,
 				9CADC9362B28EE2B00E9A243 /* MenuCommentsView.swift in Sources */,
+				9C0936172C06802D001E875E /* MenuCommentsRepositoryImpl.swift in Sources */,
 				9CA862A42B1E3CD500737E46 /* Action.swift in Sources */,
 				9CADC93A2B29DC5A00E9A243 /* CommentListUIModel.swift in Sources */,
 				9CA8629A2B1E007C00737E46 /* JSON.swift in Sources */,
@@ -921,6 +948,7 @@
 				9C8F82CF2B308533003C2DEE /* ScreenModelRepository.swift in Sources */,
 				9CF6FD822B1A6017003B74AB /* View+Extensions.swift in Sources */,
 				9CA8629E2B1E1F4B00737E46 /* CarouselComponent.swift in Sources */,
+				9C0936112C067FA5001E875E /* MenuDetailsRepository.swift in Sources */,
 				9CADC93C2B29DCCE00E9A243 /* CommentComponent.swift in Sources */,
 				9CF6FD7B2B1A5DD4003B74AB /* UIComponent.swift in Sources */,
 				9CF6FD7F2B1A5ED0003B74AB /* FeatureImageUIModel.swift in Sources */,

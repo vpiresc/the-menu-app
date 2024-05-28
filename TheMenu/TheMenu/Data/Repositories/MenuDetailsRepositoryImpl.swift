@@ -1,6 +1,6 @@
 import Foundation
 
-final class ScreenModelRepositoryImpl {
+final class MenuDetailsRepositoryImpl {
     let session: URLSession
     
     init(session: URLSession = .shared) {
@@ -8,9 +8,9 @@ final class ScreenModelRepositoryImpl {
     }
 }
 
-extension ScreenModelRepositoryImpl: ScreenModelRepository {
-    func fetchScreenModel() async throws -> ScreenModelResponse {
-        guard let url = URL(string: Constants.Urls.menuList) else {
+extension MenuDetailsRepositoryImpl: MenuDetailsRepository {
+    func fetchMenuDetails(itemId: Int) async throws -> ScreenModelResponse {
+        guard let url = URL(string: Constants.Urls.menuItemDetail(itemId: itemId)) else {
             throw NetworkError.invalidUrl
         }
         let (data, response) = try await session.data(from: url)
@@ -24,4 +24,3 @@ extension ScreenModelRepositoryImpl: ScreenModelRepository {
         return screenModelResponse
     }
 }
-
