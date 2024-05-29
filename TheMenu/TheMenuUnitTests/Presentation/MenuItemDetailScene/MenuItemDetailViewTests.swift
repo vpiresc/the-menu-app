@@ -29,17 +29,13 @@ final class MenuItemDetailViewTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_whenDisplayData_shouldCallPrepareData() async {
-        // Given
+    func test_displayData_callsPrepareData() async {
         let itemIdExpected = 1
         
-        // Given
         let sut = MenuItemDetailView(viewModel: viewModelSpy, itemId: itemIdExpected)
         
-        // When
         _ = await sut.displayData(itemId: itemIdExpected)
         
-        // Then
         XCTAssertEqual(viewModelSpy.prepareDataWasCalled, 1)
         XCTAssertEqual(viewModelSpy.itemId, itemIdExpected)
     }

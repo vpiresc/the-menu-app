@@ -27,17 +27,14 @@ final class MenuItemDetailViewModelImplTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_whenPrepareData_shouldCallUseCaseExecute() async {
-        // Given
+    func test_prepareData_callsUseCaseExecute() async {
         let itemIdExpected = 1
-        // When
         do {
             _ = try await sut.prepareData(itemId: itemIdExpected)
-            // Then
             XCTAssertEqual(useCaseMock.executeWasCalled, 1)
             XCTAssertEqual(useCaseMock.itemId, itemIdExpected)
         } catch {
-            fatalError("prepareData should not return any error")
+            XCTFail("prepareData should not return any error")
         }
     }
 }

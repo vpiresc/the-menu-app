@@ -29,14 +29,11 @@ final class MenuListViewTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_whenDisplayData_shouldCallPrepareData() async {
-        // Given
+    func test_displayData_callsPrepareData() async {
         let sut = MenuListView(viewModel: viewModelSpy)
         
-        // When
         _ = await sut.displayData()
         
-        // Then
         XCTAssertEqual(viewModelSpy.prepareDataWasCalled, 1)
     }
 }

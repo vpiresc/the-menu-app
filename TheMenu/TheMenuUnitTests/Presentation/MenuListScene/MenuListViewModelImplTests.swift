@@ -27,14 +27,12 @@ final class MenuListViewModelImplTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_whenPrepareData_shouldCallUseCaseExecute() async {
-        // When
+    func test_prepareData_callsUseCaseExecute() async {
         do {
-           _ = try await sut.prepareData()
-            // Then
+            _ = try await sut.prepareData()
             XCTAssertEqual(useCaseMock.executeWasCalled, 1)
         } catch {
-            fatalError("prepareData should not return any error")
+            XCTFail("prepareData should not return any error")
         }
     }
 }
