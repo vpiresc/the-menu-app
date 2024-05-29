@@ -25,79 +25,73 @@ final class ScreenModelRepositoryImplTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_whenFetchMenuListScreenModelWithValidData_shouldReturnScreenModelResponse() async {
-        // Given
+    func test_fetchScreenModel_returnsScreenModelResponse() async {        
+        let result = await resultValuesFor(
+            sut, Data(Stubs.makefetchScreenModelStub().utf8),
+            Stubs.makeHttpResponse(),
+            nil)
+        
+        XCTAssertNotNil(result)
+    }
+    
+    func test_fetchScreenModel_failsWithErrorWithInValidData() async {
+        let result = await resultErrorFor(
+            sut, Stubs.makeInvalidData(),
+            Stubs.makeHttpResponse(),
+            nil)
+        
+        XCTAssertNotNil(result)
+    }
+    
+    func test_fetchScreenModel_failsWithNetworkErrorWithNon200() async {
+        let result = await resultErrorFor(
+            sut, Data(Stubs.makefetchScreenModelStub().utf8),
+            Stubs.makeHttpResponse(statusCode: 500),
+            nil)
+        
+        XCTAssertEqual(result?.localizedDescription, NetworkError.invalidServerResponse.localizedDescription)
+    }
+    
+    func test_fetchScreenModel_failsWithAnyError() async {
+        let result = await resultErrorFor(
+            sut, Data(Stubs.makefetchScreenModelStub().utf8),
+            Stubs.makeHttpResponse(statusCode: 200),
+            Stubs.makeError())
+        
+        XCTAssertEqual(result?.localizedDescription, Stubs.makeError().localizedDescription)
+        
+    }
+    // MARK: - Helpers
+    
+    private func resultErrorFor(_ sut: ScreenModelRepository, _ data: Data?, _ response: HTTPURLResponse?, _ error: Error?, file: StaticString = #filePath, line: UInt = #line) async -> Error? {
         UrlProtocolMock.simulate(
-            data: Data(Stubs.makefetchScreenModelStub().utf8),
-            response: Stubs.makeHttpResponse(),
-            error: nil
+            data: data,
+            response: response,
+            error: error
         )
         
-        // When
         do {
-            let screenModelResponse = try await sut.fetchScreenModel()
-            
-            // Then
-            XCTAssertNotNil(screenModelResponse)
+            _ = try await sut.fetchScreenModel()
+            XCTFail("fetchScreenModel should not return any response", file: file, line: line)
+            return nil
         } catch {
-            fatalError("fetchScreenModel should not return any error")
+            return error
         }
     }
     
-    func test_whenFetchMenuListScreenModelWithInValidData_shouldReturnError() async {
-        // Given
+    private func resultValuesFor(_ sut: ScreenModelRepository, _ data: Data?, _ response: HTTPURLResponse?, _ error: Error?, file: StaticString = #filePath, line: UInt = #line) async -> ScreenModelResponse? {
         UrlProtocolMock.simulate(
-            data: Stubs.makeInvalidData(),
-            response: Stubs.makeHttpResponse(),
-            error: nil
+            data: data,
+            response: response,
+            error: error
         )
         
-        // When
         do {
-            _ = try await sut.fetchScreenModel()
-            
-            fatalError("fetchScreenModel should not return any response")
+            let screenModel = try await sut.fetchScreenModel()
+            return screenModel
         } catch {
-            // Then
-            XCTAssertNotNil(error)
-        }
-    }
-    
-    func test_whenFetchMenuListScreenModelWithNon200_shouldReturnNetworkError() async {
-        // Given
-        UrlProtocolMock.simulate(
-            data: Data(Stubs.makefetchScreenModelStub().utf8),
-            response: Stubs.makeHttpResponse(statusCode: 500),
-            error: nil
-        )
-        
-        // When
-        do {
-            _ = try await sut.fetchScreenModel()
-            
-            fatalError("fetchScreenModel should not return any response")
-        } catch {
-            // Then
-            XCTAssertEqual(error.localizedDescription, NetworkError.invalidServerResponse.localizedDescription)
-        }
-    }
-    
-    func test_whenFetchMenuListScreenModelWithAnyError_shouldReturnAnyError() async {
-        // Given
-        UrlProtocolMock.simulate(
-            data: Data(Stubs.makefetchScreenModelStub().utf8),
-            response: Stubs.makeHttpResponse(statusCode: 200),
-            error: Stubs.makeError()
-        )
-        
-        // When
-        do {
-            _ = try await sut.fetchScreenModel()
-            
-            fatalError("fetchScreenModel should not return any response")
-        } catch {
-            // Then
-            XCTAssertEqual(error.localizedDescription, Stubs.makeError().localizedDescription)
+            XCTFail("fetchScreenModel should not return any error", file: file, line: line)
+            return nil
         }
     }
 }
