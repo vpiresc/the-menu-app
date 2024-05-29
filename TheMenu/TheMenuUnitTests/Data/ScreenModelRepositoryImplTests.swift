@@ -25,7 +25,7 @@ final class ScreenModelRepositoryImplTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_fetchScreenModel_returnsScreenModelResponse() async {        
+    func test_fetchScreenModel_returnsScreenModelResponse() async {
         let result = await resultValuesFor(
             sut, Data(Stubs.makefetchScreenModelStub().utf8),
             Stubs.makeHttpResponse(),
@@ -61,6 +61,7 @@ final class ScreenModelRepositoryImplTests: XCTestCase {
         XCTAssertEqual(result?.localizedDescription, Stubs.makeError().localizedDescription)
         
     }
+    
     // MARK: - Helpers
     
     private func resultErrorFor(_ sut: ScreenModelRepository, _ data: Data?, _ response: HTTPURLResponse?, _ error: Error?, file: StaticString = #filePath, line: UInt = #line) async -> Error? {

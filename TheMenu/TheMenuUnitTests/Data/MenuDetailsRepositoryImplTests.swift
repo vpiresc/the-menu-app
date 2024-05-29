@@ -26,66 +26,73 @@ final class MenuDetailsRepositoryImplTests: XCTestCase {
     // MARK: Tests
     
     func test_fetchMenuDetails_returnsScreenModelResponse() async {
-        UrlProtocolMock.simulate(
-            data: Data(Stubs.makefetchScreenModelStub().utf8),
-            response: Stubs.makeHttpResponse(),
-            error: nil
-        )
+        let result = await resultValuesFor(
+            sut,
+            Data(Stubs.makefetchScreenModelStub().utf8),
+            Stubs.makeHttpResponse(),
+            nil)
         
-        do {
-            let screenModelResponse = try await sut.fetchMenuDetails(itemId: 0)
-            
-            XCTAssertNotNil(screenModelResponse)
-        } catch {
-            XCTFail("fetchScreenModel should not return any error")
-        }
+        XCTAssertNotNil(result)
     }
     
     func test_fetchMenuDetails_failsWithErrorWithInValidData() async {
-        UrlProtocolMock.simulate(
-            data: Stubs.makeInvalidData(),
-            response: Stubs.makeHttpResponse(),
-            error: nil
-        )
+        let result = await resultErrorFor(
+            sut, Stubs.makeInvalidData(),
+            Stubs.makeHttpResponse(),
+            nil)
         
-        do {
-            _ = try await sut.fetchMenuDetails(itemId: 0)
-            
-            XCTFail("fetchScreenModel should not return any response")
-        } catch {
-            XCTAssertNotNil(error)
-        }
+        XCTAssertNotNil(result)
     }
     
     func test_fetchMenuDetails_failsWithNetworkErrorWithNon200() async {
-        UrlProtocolMock.simulate(
-            data: Data(Stubs.makefetchScreenModelStub().utf8),
-            response: Stubs.makeHttpResponse(statusCode: 500),
-            error: nil
-        )
+        let result = await resultErrorFor(
+            sut, Data(Stubs.makefetchScreenModelStub().utf8),
+            Stubs.makeHttpResponse(statusCode: 500),
+            nil)
         
-        do {
-            _ = try await sut.fetchMenuDetails(itemId: 0)
-            
-            XCTFail("fetchScreenModel should not return any response")
-        } catch {
-            XCTAssertEqual(error.localizedDescription, NetworkError.invalidServerResponse.localizedDescription)
-        }
+        XCTAssertEqual(result?.localizedDescription, NetworkError.invalidServerResponse.localizedDescription)
     }
     
     func test_fetchMenuDetails_failsWithAnyError() async {
+        let result = await resultErrorFor(
+            sut, Data(Stubs.makefetchScreenModelStub().utf8),
+            Stubs.makeHttpResponse(statusCode: 200),
+            Stubs.makeError())
+        
+        XCTAssertEqual(result?.localizedDescription, Stubs.makeError().localizedDescription)
+    }
+    
+    // MARK: - Helpers
+    
+    private func resultErrorFor(_ sut: MenuDetailsRepository, _ data: Data?, _ response: HTTPURLResponse?, _ error: Error?, file: StaticString = #filePath, line: UInt = #line) async -> Error? {
         UrlProtocolMock.simulate(
-            data: Data(Stubs.makefetchScreenModelStub().utf8),
-            response: Stubs.makeHttpResponse(statusCode: 200),
-            error: Stubs.makeError()
+            data: data,
+            response: response,
+            error: error
         )
         
         do {
             _ = try await sut.fetchMenuDetails(itemId: 0)
-            
-            XCTFail("fetchScreenModel should not return any response")
+            XCTFail("fetchScreenModel should not return any response", file: file, line: line)
+            return nil
         } catch {
-            XCTAssertEqual(error.localizedDescription, Stubs.makeError().localizedDescription)
+            return error
+        }
+    }
+    
+    private func resultValuesFor(_ sut: MenuDetailsRepository, _ data: Data?, _ response: HTTPURLResponse?, _ error: Error?, file: StaticString = #filePath, line: UInt = #line) async -> ScreenModelResponse? {
+        UrlProtocolMock.simulate(
+            data: data,
+            response: response,
+            error: error
+        )
+        
+        do {
+            let screenModel = try await sut.fetchMenuDetails(itemId: 0)
+            return screenModel
+        } catch {
+            XCTFail("fetchScreenModel should not return any error", file: file, line: line)
+            return nil
         }
     }
 }
