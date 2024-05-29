@@ -24,84 +24,66 @@ final class GetMenuItemDetailScreenModelUseCaseImplTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_whenFetchMenuItemDetailScreenModelSuccessAndValidResponse_shouldReturnScreenModelWithOneComponent() async {
-        // Given
+    func test_getMenuItemDetailScreenModel_returnsScreenModelWithOneComponent() async {
         repositoryMock.responseType = .success
         repositoryMock.jsonResponse = Stubs.makefetchScreenModelStub()
         
-        // When
-        do {
-            let screenModel = try await sut.execute(with: 1)
-            // Then
-            XCTAssertNotNil(screenModel)
-            XCTAssertEqual(screenModel.components.count, 1)
-        } catch {
-            fatalError("execute should not return any error")
-        }
-    }
-    
-    func test_whenFetchMenuItemDetailScreenModelSuccessAndValidResponse_shouldReturnScreenModelWithTwoComponents() async {
-        // Given
-        repositoryMock.responseType = .success
-        repositoryMock.jsonResponse = Stubs.makefetchScreenOfTwoModelStub()
+        let screenModel = await resultValuesFor(sut, .success, Stubs.makefetchScreenModelStub())
         
-        // When
-        do {
-            let screenModel = try await sut.execute(with: 1)
-            // Then
-            XCTAssertNotNil(screenModel)
-            XCTAssertEqual(screenModel.components.count, 2)
-        } catch {
-            fatalError("execute should not return any error")
-        }
+        XCTAssertNotNil(screenModel)
+        XCTAssertEqual(screenModel?.components.count, 1)
     }
     
-    func test_whenFetchMenuItemDetailScreenModelSuccessAndInvalidResponse_shouldReturnAnError() async {
-        // Given
-        repositoryMock.responseType = .success
-        repositoryMock.jsonResponse = ""
+    func test_getMenuItemDetailScreenModel_returnsScreenModelWithTwoComponents() async {
+        let screenModel = await resultValuesFor(sut, .success, Stubs.makefetchScreenOfTwoModelStub())
         
-        // When
-        do {
-            _ = try await sut.execute(with: 1)
-            // Then
-            XCTFail("execute should not return any response")
-        } catch {
-            // Then
-            XCTAssertNotNil(error)
-        }
+        XCTAssertNotNil(screenModel)
+        XCTAssertEqual(screenModel?.components.count, 2)
     }
     
-    func test_whenFetchMenuItemDetailScreenModelFailureAndInvalidResponse_shouldReturnAnError() async {
-        // Given
-        repositoryMock.responseType = .failure
-        repositoryMock.jsonResponse = ""
+    func test_getMenuItemDetailScreenModel_failsWithAnErrorWithSuccessAndEmptyResponse() async {
+        let result = await resultErrorFor(sut, .success, "")
         
-        // When
-        do {
-            _ = try await sut.execute(with: 1)
-            // Then
-            XCTFail("execute should not return any response")
-        } catch {
-            // Then
-            XCTAssertNotNil(error)
-        }
+        XCTAssertNotNil(result)
     }
     
-    func test_whenFetchMenuItemDetailScreenModelFailureAndValidResponse_shouldReturnAnError() async {
-        // Given
-        repositoryMock.responseType = .failure
-        repositoryMock.jsonResponse = Stubs.makefetchScreenModelStub()
+    func test_getMenuItemDetailScreenModel_failsWithAnErrorWithFailureAndEmptyResponse() async {
+        let result = await resultErrorFor(sut, .failure, "")
         
-        // When
+        XCTAssertNotNil(result)
+    }
+    
+    func test_getMenuItemDetailScreenModel_failsWithAnErrorWithFailureAndValidResponse() async {
+        let result = await resultErrorFor(sut, .failure, Stubs.makefetchScreenModelStub())
+        
+        XCTAssertNotNil(result)
+    }
+    
+    // MARK: - Helpers
+    
+    private func resultErrorFor(_ sut: GetMenuItemDetailScreenModelUseCase, _ responseType: ResponseType, _ jsonResponse: String, file: StaticString = #filePath, line: UInt = #line) async -> Error? {
+        repositoryMock.responseType = responseType
+        repositoryMock.jsonResponse = jsonResponse
+        
         do {
-            _ = try await sut.execute(with: 1)
-            // Then
-            XCTFail("execute should not return any response")
+            _ = try await sut.execute(with: 0)
+            XCTFail("execute should not return any response", file: file, line: line)
+            return nil
         } catch {
-            // Then
-            XCTAssertNotNil(error)
+            return error
         }
     }
     
+    private func resultValuesFor(_ sut: GetMenuItemDetailScreenModelUseCase, _ responseType: ResponseType, _ jsonResponse: String, file: StaticString = #filePath, line: UInt = #line) async -> ScreenModelData? {
+        repositoryMock.responseType = responseType
+        repositoryMock.jsonResponse = jsonResponse
+        
+        do {
+            let screenModel = try await sut.execute(with: 0)
+            return screenModel
+        } catch {
+            XCTFail("execute should not return any error", file: file, line: line)
+            return nil
+        }
+    }
 }

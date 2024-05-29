@@ -83,5 +83,4 @@ final class GetMenuListScreenModelUseCaseImplTests: XCTestCase {
             return nil
         }
     }
-    
 }
