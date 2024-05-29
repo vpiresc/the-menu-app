@@ -2,7 +2,6 @@
 import SwiftUI
 import XCTest
 
-@MainActor
 final class MenuItemDetailViewTests: XCTestCase {
     
     // MARK: - Subject under test
@@ -13,7 +12,7 @@ final class MenuItemDetailViewTests: XCTestCase {
     
     // MARK: - Test lifecycle
     
-    override func setUp() {
+    @MainActor override func setUp() {
         super.setUp()
         repositoryMock = ScreenModelRepositoryMock()
         useCaseMock = GetMenuItemDetailScreenModelUseCaseMock()
@@ -29,7 +28,7 @@ final class MenuItemDetailViewTests: XCTestCase {
     
     // MARK: Tests
     
-    func test_displayData_callsPrepareData() async {
+    @MainActor func test_displayData_callsPrepareData() async {
         let itemIdExpected = 1
         
         let sut = MenuItemDetailView(viewModel: viewModelSpy, itemId: itemIdExpected)
