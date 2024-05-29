@@ -18,6 +18,9 @@ struct MenuListView<VM: MenuListViewModel>: View {
                     }
             }
         }.accentColor(.gray)
+            .refreshable {
+                await displayData()
+            }
     }
 }
 

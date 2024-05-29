@@ -13,6 +13,8 @@ struct MenuCommentsView<VM: MenuCommentsViewModel>: View {
             .listStyle(.plain)
             .task {
                 await displayData()
+            }.refreshable {
+                await displayData()
             }
     }
 }
