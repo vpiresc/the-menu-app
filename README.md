@@ -8,7 +8,7 @@ It is a Server Driven UI study app. It's developed with Swift native language an
 
 
 ## Technical Details
-- The project is organized into `Domain`, `Data`, and `Presentation` layers. The app is built using Swift and SwiftUI for the views, following the `Model-View-ViewModel`(MVVM) architecture pattern. This architectural choice enhances separation of concerns and facilitates testability. 
+- The project follows the clean architecture, so It is organized into `Domain`, `Data`, and `Presentation` layers. The app is built using Swift and SwiftUI for the views, following the `Model-View-ViewModel`(MVVM) design pattern. This architectural choice enhances separation of concerns and facilitates testability. 
 
 - Various design patterns such as `Repository`, `UseCases`, and `Factories` are also utilized. These patterns help in organizing code logic and promoting reusability.
 
